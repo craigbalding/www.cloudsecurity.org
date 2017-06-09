@@ -1,5 +1,5 @@
 #baseURL = "http://www.cloudsecurity.org"
-baseURL = "https://www.cloudsecurity.org"
+baseURL = ""
 title = "The Cloud Security Blog"
 
 theme = "minimo"
