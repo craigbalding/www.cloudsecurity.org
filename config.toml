@@ -1,5 +1,5 @@
 #baseURL = "http://www.cloudsecurity.org"
-baseURL = ""
+baseURL = "/"
 title = "The Cloud Security Blog"
 
 theme = "minimo"
@@ -41,7 +41,7 @@ Paginate = 3
   name = "Home"
   weight = -70
   identifier = "home"
-  url = "#"
+  url = "/"
 
 # Language Configuration
 defaultContentLanguage = "en"
