@@ -1,3 +1,53 @@
-baseURL = "http://example.org/"
-languageCode = "en-us"
-title = "My New Hugo Site"
+baseURL = "http://www.cloudsecurity.org"
+title = "The Cloud Security Blog"
+
+theme = "minimo"
+
+googleAnalytics = ""
+Paginate = 3
+
+[params]
+  description = "Expert knowledge on cloud security"
+  dateFormat = "2006, Jan 2"
+  copyrightOwner = "Craig Balding"
+  copyrightStartYear = "2017"
+  hideSingleNavigation = false
+
+[params.opengraph]
+  [params.opengraph.facebook]
+    admins = ""
+    appid = ""
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+[social]
+  facebook = ""
+
+[author]
+  name = "Craig Balding"
+
+[author.social]
+  # facebook = "MunifTanjim"
+  github = "craigbalding"
+  twitter = "craigbalding"
+
+[permalinks]
+  page = "/:slug/"
+
+[[menu.main]]
+  name = "Home"
+  weight = -70
+  identifier = "Home"
+  url = "https://www.cloudsecurity.org"
+
+# Language Configuration
+defaultContentLanguage = "en"
+
+[languages]
+  # edit this block for your own language
+  [languages.en]
+    lang = "en"
+    languageName = "English"
+    weight = 1
