@@ -1,0 +1,34 @@
+--- 
+title:      "A Question of Integrity: To MD5 or Not to MD5"
+created_at: 2008-06-25 19:50:57 Z
+description: "How do you know that the data you pushed to a cloud storage provider is the same as what you get back?  An example is provided showing a problem with Amazon S3 integrity checks."
+author:     Craig Balding
+blog_post:  true
+tags:
+- Cloud Computing Security
+- cloud storage
+- amazon aws
+
+--- 
+<p>Cloud Storage offers pay per drink off-site storage.  Data to be saved is shuffled from the customer to the Cloud Storage Provider by the network.  This all works wonderfully most of the time, what you upload is what you get back later. But what happens where the gremlins strike and what you send is not what is received?</p>
+<p>This happened recently to some Amazon S3 customers.  There were <a href='http://developer.amazonwebservices.com/connect/thread.jspa?threadID=22709'>complaints in the AWS forums about ‘S3 Corruption’</a>.  The first post in the forum was recorded at <span class='jive-description'>Jun 22, 2008 5:05 PM PDT (although in subsequent posts some people reported emailing Amazon prior to this): </span></p>
+<blockquote><p>we are having some  <span class='nfakPe'>serious </span> S3 issues.</p>
+<p>all data we store on S3 has gone through the same code path for months. starting a couple days ago a small percentage of the objects we are retrieving are not checksumming to the correct values. we hash and store objects by checksum and rehash the objects when we retrieve to ensure there is no data corruption. all the objects we’re having issues with were uploaded at approximately the same time period a few days ago.</p>
+<p>we’ve stored 10’s of millions of objects in S3 and never encountered such problems. please let me know ASAP if you have any idea what could be going on here. thanks.</p></blockquote>
+<p><span class='jive-description'>Amazon responded 6 minutes later (!) and started investigating.  To troubleshoot they asked customers to email aws@amazon.com with </span> the ‘Bucket-Name and few keys that you believe are having issues’.</p>
+<p>Others weighed in reporting similar problems.  Amazon provided status updates and on Monday Jun 23rd at 6:10pm PDT, provided the following explanation:</p>
+<blockquote><p>We’ve isolated this issue to a single load balancer that was brought into service at 10:55pm PDT on Friday, 6/20.  It was taken out of service at 11am PDT Sunday, 6/22.  While it was in service it handled a small fraction of Amazon S3’s total requests in the US.  Intermittently, under load, it was corrupting single bytes in the byte stream.  When the requests reached Amazon S3, if the Content-MD5 header was specified, Amazon S3 returned an error indicating the object did not match the MD5 supplied.  When no MD5 is specified, we are unable to determine if transmission errors occurred, and Amazon S3 must assume that the object has been correctly transmitted. Based on our investigation with both internal and external customers, the small amount of traffic received by this particular load balancer, and the intermittent nature of the above issue on this one load balancer, this appears to have impacted a very small portion of PUTs during this time frame.</p></blockquote>
+<p>What are some of the takeaways?</p>
+<ul>
+<li>If you are directly using the <a href='http://developer.amazonwebservices.com/connect/entry.jspa?externalID=123&categoryID=48'>AWS S3 API</a>, make sure to calculate and send MD5 checksums along with actual data.  Check status return codes - an HTTP 400 error code means ’something went wrong’ - respond appropriately.</li>
+<li>If you are relying on 3rd party tools to access S3, be sure to check with your software vendor that they are following the advice from Amazon to use MD5.  If they are not then your data can get silently corrupted…</li>
+<li>Downloads, aka HTTP GETs, can also be affected.  The thread in the forum continues and questions are asked as to whether the corruption caused by the loadbalancer was affecting both incoming and outgoing traffic.  The conclusion was yes.  If you are hosting media on S3, and the browser is using partial GET requests (to download in chunks) then the corruption will not be automatically detectable.</li>
+<li>If your business relies on Cloud Storage, are you prepared to wait a 36 hours for a resolution?  This isn’t a swipe at Amazon, this is true for any provider.  Check your <a href='http://www.amazon.com/gp/browse.html?node=379654011'>SLA</a>’s, check the trouble ticket resolution times, ask about availability of experts for troubleshooting etc.</li>
+<li>Cloud Providers will increasingly need to instrument their services such that they can ‘early detect’ negative operational events.  In this case, Amazon has stated plans to use better logging and analysis to automate detection of unusual error patterns (i.e. anomoly detection).</li>
+<li>This incident - caused by an Amazon malfunctioning loadbalancer - did not make it onto the AWS status page at http://status.aws.amazon.com/.  Taking Amazon at face value, this incident only affected a small number of transfers, relative to the total number of S3 transfers.  But this begs the question, what level of outage or service problem needs to happen before Amazon will flag the issue on their status page?   On a sidenote, based on the timestamps, 31 hours passed between the loadbalancer being taken out of service and Amazon providing the explanation on the forum.</li>
+<li>When Amazon update their S3 API documentation, it would be useful to have entries in the <a href='http://docs.amazonwebservices.com/AmazonS3/2006-03-01/'>S3 API index</a> for ‘checksum’, ‘MD5′, ‘integrity’ and ‘corruption’.</li>
+<li>Stepping back, will customers hold Cloud Service Providers to a higher standard than their own internal IT teams?</li>
+</ul>
+<p>I’m sure there are more takeaways I didn’t cover.  What say you?</p>
+<p>###</p>
+<p>Kudos for the heads-up on the S3 issue goes to my friend and colleague Jason Harper - network supremo and crypto-head.  Thanks Jason!</p>

@@ -1,0 +1,60 @@
+--- 
+title:      Amazon AWS Introduces New Access Policy Language (SQS Today…)
+description: "Amazon introduces fine grained access control using new policy language.  Learn how you can limit access to your cloud services."
+created_at: 2009-04-09 15:37:58 Z
+author:     Craig Balding
+blog_post:  true
+tags:
+- Infrastucture as a Service
+- aws
+
+--- 
+<p>Positive news from the Amazon camp today as <a href='http://aws.typepad.com/aws/2009/04/powerful-new-sqs-features.html'>Jeff Barr from the AWS team announces </a>a new <a href='http://docs.amazonwebservices.com/AWSSimpleQueueService/2009-02-01/SQSDeveloperGuide/'>access control policy</a>.  Right now, its applicable to the Simple Queue Service (SQS).</p>
+<h3>A Quick SQS Reminder</h3>
+<p>For those unfamiliar with SQS, here’s the <a href='http://aws.amazon.com/sqs/'>elevator pitch from Amazon</a>:</p>
+<blockquote><p>Amazon Simple Queue Service (Amazon SQS) offers a reliable, highly scalable, hosted queue for storing messages as they travel between computers. By using Amazon SQS, developers can simply move data between distributed components of their applications that perform different tasks, without losing messages or requiring each component to be always available. Amazon SQS makes it easy to build an automated workflow, working in close conjunction with the Amazon Elastic Compute Cloud EC2 and the other AWS infrastructure web services.</p>
+<p>Amazon SQS works by exposing Amazon’s web-scale messaging infrastructure as a web service. Any computer on the Internet can add or read messages without any installed software or special firewall configurations. Components of applications using Amazon SQS can run independently, and do not need to be on the same network, developed with the same technologies, or running at the same time.</p></blockquote>
+<p>So, a very handy data structure that makes perfect sense in distributed programming.  However, access control options were limited…until today.</p>
+<h3>The New Secret Sauce</h3>
+<blockquote><p>AWS is also introducing additional permission features that control access to Amazon SQS and to each of its fundamental actions on a very fine-grained basis. You can exercise this control at two levels:</p>
+<p>* At the higher level you can use the new AddPermission and RemovePermission functions to set and remove particular access rights for each queue. Access rights, including the ability to send, receive, or delete messages, change message visibility, or to retrieve queue attributes, can be granted to any AWS user via their AWS account number.<br/>
+* At the lower level you can use our new Access Policy Language.<strong> This expressive language makes its debut as part of this SQS release; over time, we plan to employ this Access Policy Language with our other services.</strong> The Access Policy Language enables the creation of complex rules to enable access to queues based on identity (AWS account number), source IP address, date, time, and more.</p>
+<p>With this new permission system you can now use Amazon SQS queues to connect non-AWS applications to AWS applications and to connect AWS applications from different organizations. You could use an open, public queue as a drop box, allowing outside applications to submit work items for processing. This could be a fully public drop box, or it could be limited to requests from a single country by using a policy based on an IP address or address range. Communication between organizations can be established based on IP addresses or AWS accounts, as appropriate.</p></blockquote>
+<p>For me, the most significant news is not so much that SQS now has fine grained access control, but that Amazon have introduced a Access Policy Language and they plan to apply it to other AWS services.  This is a very positive development and could be the mechanism they use to overcome some of the <a href='http://cloudsecurity.org/2009/04/08/is-amazon-aws-really-hipaa-compliant-today/'>longstanding security concerns I blogged about recently</a>.</p>
+<h3>Architectural Overview</h3>
+<p>For the visually inclined (<a href='http://docs.amazonwebservices.com/AWSSimpleQueueService/2009-02-01/SQSDeveloperGuide/AccessPolicyLanguage_ArchitecturalOverview.html'>source</a>):</p>
+<p><img class='center' title='Amazon Simple Queue Service with Access Policy Language' src='/files/Amazon_Simple_Queue_Service-20090409-171444.jpg' height='332' alt='Amazon_Simple_Queue_Service-20090409-171444 Amazon AWS Introduces New Access Policy Language (SQS Today...)' width='512'/></p>
+<blockquote><p>Where:</p>
+<p>1. You, the resource owner.</p>
+<p>2. Your resources (contained within the AWS service; e.g., SQS queues).</p>
+<p>3. Your policies.  Typically you have one policy per resource, although you could have multiple. The AWS service itself provides an API you use to upload and manage your policies. For information about the content of the policies, see How to Write a Policy.</p>
+<p>4. Requesters and their incoming requests to the AWS service.</p>
+<p>5. The access policy language evaluation code.</p>
+<p>This is the set of code within the AWS service that evaluates incoming requests against the applicable policies and determines whether the requester is allowed access to the resource. For information about how the service makes the decision, <a href='http://docs.amazonwebservices.com/AWSSimpleQueueService/2009-02-01/SQSDeveloperGuide/AccessPolicyLanguage_EvaluationLogic.html'>see Evaluation Logic</a> (Ed: note there are soft and hard denials).</p></blockquote>
+<h3>An Example</h3>
+<p>Here’s <a href='http://docs.amazonwebservices.com/AWSSimpleQueueService/2009-02-01/SQSDeveloperGuide/SQSExamples.html'>an example from the developer docs</a> showing a simple IP based control (multiple controls can be applied to a single resource):</p>
+<blockquote><p>The following example policy gives all users permission to use all possible SQS actions that can be     shared for the queue named 987654321098/queue1, but only if the request comes from the     192.168.143.0/24 range.</p></blockquote>
+<p/><pre><pre>{
+  "Version": "2008-10-17",
+  "Id": "Queue1_Policy_UUID",
+  "Statement":
+     {
+        "Sid":"Queue1_AnonymousAccess_AllActions_WhitelistIP",
+        "Effect": "Allow",
+        "Principal": {
+           "AWS": "*"
+         },
+        "Action": "SQS:*",
+        "Resource": "/987654321098/queue1",
+        "Condition" : {
+            "IpAddress" : {
+               "SourceIP":"192.168.143.0/24"
+            }
+     }
+}</pre></pre><p/>
+<h3>Conclusion</h3>
+<p>Notice the values for the ‘Action’ and ‘Resource’ tags.  Now imagine those with different AWS service identifiers and resource types and things start to get really interesting.</p>
+<p>Now all we need is an user-friendly, hard-to-shoot-yourself-in-the-foot policy generator/front-end to open this feature up to the masses.</p>
+<p>All in all, its great to see the introduction of a consistent policy language from the cloud pioneer.</p>
+<p>I’m off to learn <a href='http://docs.amazonwebservices.com/AWSSimpleQueueService/2009-02-01/SQSDeveloperGuide/AccessPolicyLanguage_HowToWritePolicies.html'>more</a> about the language…</p>
+<p><strong>Update</strong>: in case it isn’t obvious from the example, the policy language is expressed using <a href='http://json.org/'>JSON</a> (thanks @lmacvittie for the prompt)</p>

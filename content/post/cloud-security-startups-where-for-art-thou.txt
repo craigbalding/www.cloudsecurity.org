@@ -1,0 +1,19 @@
+--- 
+title:      "Cloud Security Startups: Where For Art Thou?"
+description: "Share your cloud security startup and get free security consulting to help your startup prepare for 'Under The Radar'."
+created_at: 2009-03-11 20:09:42 Z
+author:     Craig Balding
+blog_post:  true
+tags:
+- Cloud Computing Security
+
+--- 
+<p><img title='Cloud Security Startups: Where For Art Thou?' src='http://img.skitch.com/20090311-buygxgwqs94crxf81rm4jhs1ne.jpg' alt='Under the Radar'/></p>
+<p>Recently I asked <a href='http://cloudsecurity.org/2009/03/06/the-uitimate-cloud-security-challenge-spot-the-cloud-security-evangelist/'>‘Where are the Cloud Security Evangelists?’</a>.  <strong>Now I’m asking ‘Where are the Cloud Security startups?’</strong>.</p>
+<p>I’ve had briefings and Q&amp;A sessions with a few but a recent email from a regular reader over at <a href='http://www.undertheradarblog.com/'>‘Under the Radar’</a>, prompted me to think “Yeah, where are they?”.</p>
+<p>If you or someone you know are working at a <strong>pure-play Cloud Security or SaaS Securty startup</strong>, <a href='http://cloudsecurity.org/contact/'>I’d love to hear from you</a>.</p>
+<p>First, I’m really curious what security challenge you are addressing.  Second, if you make it past<a href='http://www.undertheradarblog.com/nominate-to-present/'> this application form</a> and can get yourself over to San Francisco in April, <strong>you get to pitch your offering to a group of CIOs at ‘Under the Radar’</strong>.</p>
+<p>Ordinarily, the prospect of meeting a room full of CIOs just doesn’t get me all that excited, however, <strong>you’ll get to meet CISCO Cloud pin-up </strong><a href='http://news.cnet.com/the-wisdom-of-clouds/'><strong>James Urquhart</strong></a><strong>!</strong></p>
+<p>As its looking highly likely I will be declining my invitation (logistics, logistics), I’d like to make an offer to any security startup that gets accepted to pitch: <strong>I will give you up to 2 hours of my personal time (gratis) to grill you on your solution from an enterprise security perspective</strong>.  Let me find the security holes before the panel does :-).  If you think that might be valuable, <a href='http://cloudsecurity.org/contact'>reach out here</a>.</p>
+<p>And just to be clear, no-one is paying me for this - I’m just very curious and a firm believer in good karma.</p>
+<p><strong>What new Cloud Security startups are you aware of?</strong> Hit the comments…</p>

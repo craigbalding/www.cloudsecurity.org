@@ -1,0 +1,22 @@
+--- 
+title:      "Avoid the Facepalm: Cloud Security vs. Security in the Cloud"
+description: "Cloud terminology can be confusing.  Learn the difference between cloud security and security in the cloud."
+created_at: 2009-05-04 20:10:59 Z
+author:     Craig Balding
+blog_post:  true
+tags:
+- Cloud Computing Security
+- security in the cloud
+- terminology
+
+--- 
+<p>One of the slides I added to my Black Hat presentation at the last minute can be seen below:</p>
+<p><img class='aligncenter' title='Cloud Security vs Security in the Cloud' src='/files/blackhat-europe-2009-Balding-CloudSecurity-slides.pdf_%28page_7_of_81%29-20090504-212519.jpg' height='420' alt='blackhat-europe-2009-Balding-CloudSecurity-slides.pdf_%28page_7_of_81%29-20090504-212519 Avoid the Facepalm: Cloud Security vs. Security in the Cloud' width='494'/></p>
+<p>Introducing the slide, I remarked that its important to differentiate the two:</p>
+<ul>
+<li>“Cloud Security”: this refers to the security of “the Cloud”, or more usefully, of a given cloud.  Stepping back, we can use the term to refer to the general security aspects of Cloud Computing.</li>
+<li>“Security in the Cloud”: this is about delivering security services via “the cloud”.</li>
+</ul>
+<p>Back in April 2008, when I was naming this blog, I initially planned to call it ‘Security in the Cloud’ but after 30 minutes of Googling and reading, it became evident that I was mistaken as this term had already been adopted to refer to services delivered via the Internet (primarily Security MSSPs).  Hence cloudsecurity.org was born.</p>
+<p>Having said all that, I’m now seeing newer “security in the Cloud” providers referring to themselves as ‘the Cloud Security Leader’ which only serves to add to the confusion.</p>
+<p>[This post was inspired by <a href='http://devcentral.f5.com/weblogs/macvittie/archive/2009/05/04/the-real-meaning-of-cloud-security-revealed.aspx' title='The Real Meaning of Cloud Security Revealed'>"The Real Meaning of Cloud Security Revealed"</a> by Lori MacVittie]</p>

@@ -1,0 +1,63 @@
+--- 
+title:      Dissecting the EPIC Complaint against Google
+description: "What happens when a popular privacy group takes on the worlds largest cloud provider?  EPIC files compliant with the FTC citing concerns with Googles' privacy and security." 
+created_at: 2009-03-18 22:21:58 Z
+author:     Craig Balding
+blog_post:  true
+tags:
+- Cloud Computing Security
+- Software as a Service
+- complaint
+- epic
+- ftc
+- google
+- google docs
+- privacy
+
+--- 
+<p><img class='left' title='epic.org logo' src='/files/Electronic_Privacy_Information_Center-20090318-205029.jpg' height='92' alt='Electronic_Privacy_Information_Center-20090318-205029 Dissecting the EPIC Complaint against Google' width='260'/><a href='http://epic.org/privacy/cloudcomputing/google/ftc031709.pdf'>The Electronic Privacy Information Center (EPIC) has lodged a formal complaint</a> about Google to the US Federal Trade Commission (FTC), insisting that they investigate the adequacy and sufficiency of Googles privacy and security safeguards.  EPIC is also seeking changes to Googles Term of Service and a suspension of Googles Cloud Computing services until ’safeguards’ are verifiably established.  Finally, they want the FTC to “compel Google to contribute 5,000,000USD to a public fund that will help support research concerning privacy enhancing technologies…”.</p>
+<p>EPIC forwards this complaint on 3 primary fronts:</p>
+<ul>
+<li>the specific ways that Google represents their security controls to consumers (yet disclaims all responsibilities in the Terms of Service)</li>
+<li>the “harm” caused by the recent Google Docs privacy breach</li>
+<li>the claim that Google has “inadequate security”</li>
+</ul>
+<p>Secondary arguments include citing a number of other, older vulnerabilities in Google online services and referencing some significant privacy breaches where the FTC acted before.  In my view, these are distractions and inconsistent with the primary argument.  The call for Google to pay 5 million dollars is poorly framed, seemingly an afterthought and potentially devisive.  I suspect EPIC will have lost the goodwill of privacy moderates by making such a demand.  Had they just dropped the number and left the call for a fund, it might have made it more palatable.</p>
+<p>Given the complaint is 15 pages long, there is plenty to comment on.  For the sake of brevity, lets contain our analysis to the primary arguments, introduce a potential curveball and go “one step beyond” to examine the implications for Google users should the FTC rule in EPICs favour.</p>
+<h2>What Google Says About Security</h2>
+<p>EPIC highlights two specific security claims made by Google.</p>
+<p style='text-align: center;'><strong>On the Google Docs homepage</strong></p>
+<p style='text-align: center;'><img class='center' title='Google Docs security claim: Files are stored securely online' src='/files/Welcome_to_Google_Docs-20090318-204804.jpg' height='263' alt='Welcome_to_Google_Docs-20090318-204804 Dissecting the EPIC Complaint against Google' width='347'/></p>
+<p style='text-align: center;'><strong>Getting to know Google Docs&gt; Saving your presentation</strong></p>
+<p style='text-align: center;'><img class='center' title='Google Docs saves to a secure, online storage facility' src='/files/Getting_to_know_Google_Docs___Saving_your_presentation_-_Google_Docs_Help-20090318-205728.jpg' height='122' alt='Getting_to_know_Google_Docs___Saving_your_presentation_-_Google_Docs_Help-20090318-205728 Dissecting the EPIC Complaint against Google' width='466'/></p>
+<p style='text-align: left;'>The complaint then goes on to suggest that Google<strong> “encourages users to add personal information to their documents and spreadsheets”</strong><strong> and repeats the statement made by Google that </strong><strong>“your data is private, unless you grant access to others and/or publish your information”.</strong></p>
+<p style='text-align: left;'>Having built their primary argument based on public statements made on Google online properties, they bring out the <a href='http://www.google.com/accounts/TOS'>Google Terms of Service</a> which states in Section 14.1 that the services are provided “as is”, with no warranty and that Google does “not represent or warrant” that [14.2 B] “your use of the Services will be uninterrupted, timely, secure or free from error”.  Section 15 states that Google will not be liable for losses.</p>
+<h2>The Harm Caused By The Google Docs Privacy Breach</h2>
+<p>EPIC then attempts to link the Google Docs privacy breach with harm experienced by Google users:</p>
+<p style='text-align: left;'><img class='aligncenter' title='The Harm Caused by the Google Docs Privacy Breach' src='/files/http__epic.org_privacy_cloudcomputing_google_ftc031709.pdf-20090318-213845.jpg' height='175' alt='http__epic.org_privacy_cloudcomputing_google_ftc031709.pdf-20090318-213845 Dissecting the EPIC Complaint against Google' width='532'/></p>
+<p style='text-align: left;'><strong>Curious.  2 sentences in a 15 page report where EPIC could have firmly established the ‘harm’ case.  No examples, no quantification, no impact analysis.</strong> Perhaps EPIC is playing its hand carefully and is readying a parade of impacted users who can demonstrate they were “harmed” by the privacy snafu.  Failing that, it would mean they have built their case on the morality of a software privacy bug at a popular online service and ultimately, an industry wide disparity between the big print a company uses to market their services (and software!) as trustworthy and the small print where the lawyers spell out the case for the defense.</p>
+<h2>The Claim That Google has Inadequate Security</h2>
+<p style='text-align: left;'>The third and final primary argument.  Skipping past the reminder from EPIC to the FTC that they acted in response to other privacy breaches, EPIC goes on to state that <strong>Google’s “inadequate security is an unfair business practice” and that Google’s “Inadequate Security” is a deceptive trade practice”</strong>.   They argue that the Google Docs privacy breach was a result of inadequate security practices and that Google:</p>
+<ul>
+<li>encourages people to share “sensitive” documentation in promoting their services</li>
+<li>“knew that Cloud Computing Services are susceptible to data breaches”</li>
+<li>“knew that disclosure of personal user data could cause substantial injury to customers”</li>
+<li>was “aware that commonsense security measures, including storing user data in encrypted form, rather than in clear text, could reduce the likelihood and extent of consumer injury”</li>
+<li>“created an unnecessary risk to users’ data by <strong>employing unreasonable security practices</strong>, including the storage and transmission of personal information on its computer network in clear text”</li>
+</ul>
+<p><strong>What I find fascinating about this is that EPIC is drawing a significant conclusion about Google’s security practices based on the fact that Google doesn’t take “commonsense” security measures.</strong> In other words, because Google hasn’t implemented a PKI and DRM for document sharing in a (for many) free service, Google is somehow employing unreasonable security practices (!).</p>
+<p>This just strikes me as really unreasonable and wholly unrealistic.  I<strong>f the FTC mandated those level of security protections to “qualify” for accepting data that consumers choose to put in the Cloud, you can say goodnight to *all* of the popular Web 2.0 services.</strong></p>
+<p>With Google thoroughly chastised, they draw the following “big picture” conclusion:</p>
+<p><img class='center' title='EPIC Conclusion in Google Complaint' src='/files/http__epic.org_privacy_cloudcomputing_google_ftc031709.pdf-20090318-212549.jpg' height='297' alt='http__epic.org_privacy_cloudcomputing_google_ftc031709.pdf-20090318-212549 Dissecting the EPIC Complaint against Google' width='532'/></p>
+<p>First Google, now the Cloud Computing as a whole - I’d better change my domain name fast! ;-).</p>
+<h2>A Potential Curveball</h2>
+<p><strong>After I posted <a href='http://cloudsecurity.org/2009/03/07/analysis-of-google-docs-sharing-flaw-from-an-incident-response-perspective/'>my thoughts on how Google Security responded to the Google Docs sharing problem</a> I was contacted by a Google Docs user who stated that he reported a sharing problem to Google in January.</strong> He discovered a large number of documents shared with over a hundred people (he gave specific numbers that I’m intentionally not quoting to protect his privacy).  He states he called Google Tech support who initiated a support case.</p>
+<p>Assuming this is true (and based on his note, I have no reason to doubt it) it means either:</p>
+<ul>
+<li>Google Docs has suffered another sharing problem that was quietly fixed (no notification?)</li>
+<li>If this is the same sharing problem, it means at least someone in Google knew about it from late January which completely changes how their responsiveness to dealing with this problem will be perceived.</li>
+</ul>
+<h2>What If EPIC Gets Their Way</h2>
+<p><strong>If the FTC went as far as forcing Google to suspend its services, we will witness the largest Denial of Legitimate Service (DoLS) attack in history</strong>.</p>
+<p>Can you imagine how that would play out?  I suspect it would also be the worst PR disaster of all time for EPIC as Google users turn on them in their droves…</p>
+<p><strong>In their concern for privacy, one part of security that EPIC seems to have forgotten is availability and the Cloud is all about that.</strong></p>

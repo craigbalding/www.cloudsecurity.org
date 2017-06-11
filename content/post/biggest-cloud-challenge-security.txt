@@ -1,0 +1,16 @@
+--- 
+title:      "Biggest Cloud Challenge: Security"
+description: "A recent survey suggests IT decision makers consider cloud security the biggest challenge.  What is your cloud provider doing to address your concerns?"
+created_at: 2008-10-14 02:36:07 Z
+author:     Craig Balding
+blog_post:  true
+filter:
+- textile
+tags:
+- Cloud Computing Security
+
+--- 
+<p>Hardly a shock but validates the need for a meaningful security conversation between Cloud providers and potential Cloud customers…</p>
+<blockquote><p>As part of our ongoing research into Cloud Computing, IDC recently conducted a survey of 244 IT executives/CIOs and their line-of-business (LOB) colleagues about their companies’ use of, and views about, IT Cloud Services.  Successful suppliers will need to address both the biggest challenges of cloud services, and the biggest traditional IT user issues.In part 1, we looked at current and future adoption of IT cloud services.  In part 2, we looked at users’ views about the <a href='http://blogs.idc.com/ie/?p=210'>key benefits and challenges of IT cloud services</a>.</p>
+p=. !/files/2008/10/it_cloud_services_challenges.jpg(Chart showing biggest Cloud challenges)!
+<p>What is your Cloud Provider doing to address your security concerns?</p>

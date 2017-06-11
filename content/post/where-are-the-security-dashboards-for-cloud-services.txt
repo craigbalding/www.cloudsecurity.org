@@ -1,0 +1,26 @@
+--- 
+title:      Where are the Security Dashboards for Cloud Services?
+description: Cloud providers share dashboards showing operational metrics including uptime and outages over time.  To speed enterprise cloud adoption, providers should expose cloud security metrics.
+created_at: 2008-04-17 18:55:44 Z
+author:     Craig Balding
+blog_post:  true
+filter:
+- textile
+tags:
+- Cloud Computing Security
+- aws
+- dashboards
+- metrics
+
+--- 
+!/files/2008/04/amazon-service-health-dashboard.png(Amazon Service Health Dashboard)!
+<p>I received an email today from Amazon Web Services (AWS) Support announcing new support offerings.  One item that caught my attention is the new <a href='http://status.aws.amazon.com/'>Service Health Dashboard.</a></p>
+<p>The dashboard is pretty standard fare - traffic lights to show availability for each Amazon service with a historical view available at the bottom.</p>
+<p>This is good and all but where is the security dashboard?  I’d like to know their “security service” is operating normally.  Are they “hacker safe” ;-)</p>
+<p>I can dream right?</p>
+<p>Users of <a href='http://www.salesforce.com/'>salesforce.com</a> are not dreaming when they surf over to <a href='http://trust.salesforce.com/'>trust.salesforce.com</a>.  In addition to the - dare I say it - “expected” service availability dashboard, they display recent security alerts to raise awareness.</p>
+!/files/2008/04/salesforce-security-dashboard.png(Security Dashboard at salesforce.com)!
+<p>Thats definitely a “good thing” - as far as it goes.</p>
+<p>For larger organisations that already use security metrics to track the effectiveness of their security program, this isn’t going to cut it.</p>
+<p>Cloud providers, are you listening?</p>
+<p>What security metrics would you expect to see from your cloud provider?</p>

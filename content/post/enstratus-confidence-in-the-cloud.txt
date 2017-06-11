@@ -1,0 +1,66 @@
+--- 
+title:      "enStratus: Confidence in the Cloud (Plus: $100 off Under The Radar VIP Tickets)"
+created_at: 2009-04-10 20:21:00 Z
+author:     Craig Balding
+blog_post:  true
+tags:
+- Infrastucture as a Service
+- aws
+- ebs
+- ec2
+- encryption
+- enStratus
+- startups
+- under the radar
+
+--- 
+<p><img class='left' title='Enstratus: Confidence in the Cloud' src='/files/enStratus_-_Web-based_Cloud_Infrastructure_Management_Tools-20090410-111950.jpg' height='114' alt='enStratus_-_Web-based_Cloud_Infrastructure_Management_Tools-20090410-111950 enStratus: Confidence in the Cloud (Plus: $100 off Under The Radar VIP Tickets)' width='241'/>Regular readers will know I <a href='http://cloudsecurity.org/2009/03/11/cloud-security-startups-where-for-art-thou/'>recently extended an invitation</a> to give feedback from an enterprise IT security perspective to any startup that got accepted to present at <a href='http://www.undertheradarblog.com/'>Under The Radar</a> on April 24th in Mountain View, California.</p>
+<p>This post is a summary of a very interesting call I had with <a href='https://twitter.com/GeorgeReese'>George Reese</a>, CTO of <a href='http://www.enstratus.com/'>enStratus</a> and <a href='http://www.oreillynet.com/pub/au/429'>author</a> of the forthcoming “<a href='http://www.amazon.com/Cloud-Application-Architectures-Applications-Infrastructure/dp/0596156367/ref%3Dsr_1_1?ie=UTF8&s=books&qid=1239378226&sr=8-1'>Cloud Application Architectures”</a> book.  Please note: this isn’t a comprehensive review of the full service, rather it reflects the pieces that we delved into based on some of the common concerns we have around Cloud Security (to give you some idea, we spoke for over 90 minutes…).</p>
+<p>enStratus offers cloud infrastructure management tools “aimed at the needs of enterprise IT”.  Today, they support <a href='http://aws.amazon.com/ec2/'>Amazon EC2</a>, with support for other clouds to follow.</p>
+<p>Their tag line is ‘Confidence in the Cloud’ and their offering focuses on 3 key areas addressing the twin cloud adoption barriers of security and reliability:</p>
+<ul>
+<li> protecting cloud based data through encryption</li>
+<li> offering service levels above that of the underlying cloud provider (99.9999% for EC2)</li>
+<li> achieving Recovery Time and Recovery Point Objectives “in the face of the most extreme disasters”.</li>
+</ul>
+<p>George outlined 3 concerns his customers have about cloud providers such as Amazon:</p>
+<ul>
+<li> Amazon controls the physical systems on which the data resides, meaning Amazon malfeasance, Amazon misfeasance, or even 3rd party subpoenas put that data at risk.</li>
+<li> The complexity of resource orchestration in the context of credential management; i.e. when do your credentials need to be in the cloud versus when their presence is just a security risk</li>
+<li> User management, even via traditional identity management systems, can be dysfunctional.</li>
+</ul>
+<h3>The enStratus Approach to Cloud Key Management</h3>
+<p>One of my pet peeves with AWS is the “<a href='http://cloudsecurity.org/2009/04/08/is-amazon-aws-really-hipaa-compliant-today/'>one key to rule them all</a>” security model (the dysfunctional user management George alluded to).  Any disclosure of that key results in an attacker gaining access to all your infrastructure.  But to make privileged API calls, every developer must have a copy of the key…</p>
+<p>Its not unknown for AWS users bundling an AMI (creating a virtual machine image) for public consumption <a href='http://developer.amazonwebservices.com/connect/thread.jspa?messageID=66198&#66198'>to leave their AWS credentials in the AMI itself</a>.  Oops.  This is obviously a Bad Thing ™ as a malicious user that opts to use that AMI can steal their access key, gain access to their Amazon hosted infrastructure and run up bills in their name.</p>
+<p>One of the things I really like about the enStratus offering, is the relentless focus on controlling the use and hence exposure of a customers’ ‘cloud masterkeys’.  Their implementation keeps the keys away from the AMI, and therefore  the cloud, PLUS out of the hands of an org’s IT/dev people.</p>
+<p>enStratus acts as a trust broker.  After signing up for the service, the customer loads their “all powerful” Amazon credentials via a shared enStratus Provisioning Server into a Credentials Server (no direct internet connectivity).</p>
+<p><img class='center' title='Amazon Credentials Page' src='/files/AWS-Credentials.jpg-20090410-212558.jpg' height='260' alt='AWS-Credentials.jpg-20090410-212558 enStratus: Confidence in the Cloud (Plus: $100 off Under The Radar VIP Tickets)' width='540'/></p>
+<p>From that point forward,  the customers’ IT people access the enStratus service and manage their cloud infrastructure via named user accounts assigned specific privilege levels.</p>
+<p><img class='center' title='Add a user to enStratus' src='/files/Add-User.jpg-20090410-212833.jpg' height='342' alt='Add-User.jpg-20090410-212833 enStratus: Confidence in the Cloud (Plus: $100 off Under The Radar VIP Tickets)' width='338'/></p>
+<p>Permissions include;</p>
+<ul>
+<li>administrator</li>
+<li>start/stop servers</li>
+<li>uptime retrieval and</li>
+<li>audit trail review.</li>
+</ul>
+<p>Non-administrative users have no direct access to the AWS keys.</p>
+<p>Here’s a peek at the architecture of enStratus.</p>
+<p><img class='center' title='Enstratus Architecture' src='/files/enstratus_architecture-20090410-212155.jpg' height='401' alt='enstratus_architecture-20090410-212155 enStratus: Confidence in the Cloud (Plus: $100 off Under The Radar VIP Tickets)' width='542'/></p>
+<p>When an authorised enStratus user issues cloud infrastructure management requests via the Web Services and Console server, the Provisioning server issues the cloud API calls on behalf of the users.  This eliminates the need for every user needing a copy of the key to sign requests.  Given they are mediating API requests, adding logging functionality was a no-brainer and means the next time you need to know ‘who spun up that unpatched AMI image with an allow-all security group?’, you can find out.</p>
+<p>Its important to note that there is nothing preventing anyone with your AWS key from just making API calls directly to the AWS API endpoint - totally bypassing the enStratus infrastructure.  Therefore, careful key lifecycle management is still necessary; i.e. load fresh AWS credentials straight into enStratus and follow a “no sharing” policy.</p>
+<p>I should point out that the EC2 ecosystem players can’t do anything about this as the AWS platform doesn’t offer a mechanism to tie IP level controls to AWS key usage or EC2 (yet).  One way Amazon could implement this (nothing announced) is with their <a href='http://cloudsecurity.org/2009/04/09/amazon-aws-introduces-new-access-policy-language-sqs-today/'>new JSON based Access Policy Language</a>.  Despite this, enStratus can still detect new EC2 instances spun-up by API calls they didn’t mediate, through telemetry used for operational monitoring - they just won’t be able to tell you who started it.</p>
+<p>enStratus can help customers build their AMIs, including bundling in HIDS (Host based Intrusion Detection) via <a href='http://www.ossec.net/'>ossec</a>, with centralised agent reporting.  Another example of how they protect the AMI key is through error checking in their scripted AMI builds to ensure key material is not left in an AMI accidently.  In addition, users are prevented from accessing partially provisioned AMIs (to eliminate potential key snarfing shenanigans).</p>
+<p>Root access to EC2 images is disabled by default (unlike with vanilla EC2).  Privileged access is granted via sudo.</p>
+<h3>Filesystem Encryption</h3>
+<p>enStratus offers optional filesystem encryption through a checkbox.  Keys are temporarily passed into the EC2 instance when required; i.e. mounting.</p>
+<p>Encrypted filesystem support is implemented via 2 block volumes configured as RAID 0.  2 sets of encryption keys are used.  One for encrypting and remounting the ephemeral drive (this is a “non-persistent store” automagically attached by EC2 to each running AMI).  The second key pair is used to encrypt and mount filesystems attached as <a href='http://aws.amazon.com/ebs/'>Elastic Block Storage</a> (EBS).  EBS is off-instance, persistent storage.  To avoid potential exposure of key material, the 2nd set of keys are stored on the encrypted ephemeral drive during mount.</p>
+<p>Worth noting is that in testing, George found that 2 EBS volumes, configured as RAID 0 with an encrypted XFS filesystem  offers similar performance to a single, unencrypted EBS volume with an ext3 filesystem.</p>
+<p>George is keen to stress that enStratus is <strong>not</strong> looking to control both customers data and their keys.  So whilst he recommends and can help customers make use of the EBS snapshot feature to clone/backup storage volumes to Amazon S3 (Simple Storage Service), he isn’t offering a hosted backup service (to avoid a potential conflict).  Of course, an evil and privileged enStratus employee <em>could</em> access your live data as the keys are stored in their Credential server.  Today though, enStratus is a small company so figuring out ‘who dunnit’ would not require the services of Sherlock Holmes.</p>
+<h3>Futures</h3>
+<p>Today, the enStratus management infrastructure sits outside of the cloud (at a colo) for cloud monitoring and isolation reasons.  George is exploring the possibility of also offering an on-premise offering for customers wishing for more control.</p>
+<p>I offered a few short and medium term suggestions around additional integrity checks, encryption ideas, assurance processes (source code security reviews, penetration testing) and consideration to using a Hardware Security Module (HSM) for key storage to further bolster both security and trust.  George seemed genuinely open and receptive to these ideas and also shared a few interesting customer requests they are actively working on today.  Some of the more expensive line items would become practical if they can attract additional funding.</p>
+<p>Overall, I have to say I’m impressed with their approach, technology and attitude.  Definitely worth a hands-on evaluation if current Cloud controls don’t fall within your risk tolerance.</p>
+<p>Good luck to George and the rest of the enStratus team as they prepare to present at Under The Radar!</p>
+<h3>Attending Under The Radar?</h3>
+<p>As a special offer to cloudsecurity.org readers, the organisors of Under The Radar are offering $100 off the list price for VIP tickets.  To claim yours, click <a href='http://bit.ly/hRcwQ'>here</a>.</p>

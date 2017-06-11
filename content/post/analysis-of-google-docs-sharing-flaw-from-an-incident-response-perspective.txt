@@ -1,0 +1,46 @@
+--- 
+title:      Analysis of Google Docs Sharing Flaw from an Incident Response Perspective
+description: "A vulnerability in the sharing feature in Google Docs led to unauthorized disclosure of private customer data.  How did the Google Security Team handle it?"
+created_at: 2009-03-07 21:12:44 Z
+author:     Craig Balding
+blog_post:  true
+tags:
+- Software as a Service
+- google
+- incident response
+
+--- 
+<p><strong>Google Docs has just notified users affected by a flaw in its document sharing feature.</strong> We don’t know how many users or documents were affected - Google have only stated that less than 0.05% of all documents are affected (via <a href='http://www.techcrunch.com/2009/03/07/huge-google-privacy-blunder-shares-your-docs-without-permission/'>TechCrunch</a>).</p>
+<p>The weakness appears to have been discovered by Richard De Vries.  He <a href='http://slashdot.org/~RichardDeVries/journal/225229'>retells the story</a> on Slashdot:</p>
+<blockquote><p>I work for a small Dutch company that uses Google Apps. This means that we can share documents with users within our domain (<a href='http://www.deondernemers.nl/' rel='nofollow'>www.deondernemers.nl</a>), as well as @gmail.com accounts or other Apps-domains. <strong>About three weeks ago, we discovered that some fifteen documents and spreadsheets were unintentionally shared with a lot of people, some of whom were outside of our domain</strong>. We found out that one of us had been wanting to share these documents with a colleague (within our domain). He selected the documents on the documents list and added one user. Google Docs then shared all these documents with everyone who had access to one of the selected documents.</p></blockquote>
+<p><strong>The official Google notification to affected users describes the issue as follows</strong>:</p>
+<blockquote><p>We wanted to let you know about a recent issue with your Google Docs account. <strong>We’ve identified and fixed a bug which may have caused you to share some of your documents without your knowledge. This inadvertent sharing was limited to people with whom you, or a collaborator with sharing rights, had previously shared a document. The issue only occurred if you, or a collaborator with sharing rights, selected multiple documents and presentations from the documents list and changed the sharing permissions. This issue affected documents and presentations, but not spreadsheets.</strong></p>
+<p>To help remedy this issue, we have used an automated process to remove collaborators and viewers from the documents that we identified as being affected. Since the impacted documents are now accessible only to you, you will need to re-share the documents manually. For your reference, we’ve listed below the documents identified as being affected…</p></blockquote>
+<p>I’ll leave others to comment on the obvious privacy issues, but <strong>what I find really interesting is how Google handled it. </strong>Based on publicly available timeline information, we can attempt to glean insights into how the investigation progressed.</p>
+<h3>Timeline</h3>
+<blockquote><p><em>February 22nd:</em> Initial report from Richard De Vries.  Richard noted difficulty in knowing where he could report the issue (an issue in itself) so ended up reporting it in a general catch-all bug reporting form.</p>
+<p><em>February 25th:</em> Google Security contact Richard to verify the vulnerability report.  They requested he re-create the sharing scenario.  The 3 day delay between Richared reporting the bug and the response from Google Security will not surprise anyone thats works in a large company.  If security concerns don’t follow your established communication channels (intuitive to customers or not), then a game of pass the parcel ensues until it reaches the internal security team.</p>
+<p><em>March 3rd:</em> Google Security confirms the weakness</p>
+<p><em>March 7th:</em> Google notifies affected customers</p></blockquote>
+<h3>Tasks</h3>
+<p><strong>So in the past 10 days, these are the likely tasks that happened at Google</strong> (assume some tasks carried out in parallel and some repeat tasks):</p>
+<ul>
+<li><strong>develop a strategy </strong><strong>to handle the weakness and convene a virtual team</strong> with representatives from development, Google Security, operations, support, privacy, product managment and PR</li>
+<li><strong>establish a meeting schedule and agree how to collaborate </strong>(Google Docs anyone? ;-)</li>
+<li><strong>fully understand the problem and establish the implications of the vulnerability.</strong> This is likely to involve a mix of brainstorming, source code review and ad hoc data-mining of the Google Docs database to validate hypothesis</li>
+<li><strong>perform an in-depth security source code review</strong> of the affected code and neighbouring code to check for similar logic flaws.  This larger review is a precautionary measure to identify possible weaknesses that could become the subject of attack when word of the original vulnerability gets out</li>
+<li><strong>create necessary fixes and test</strong> on a standby system</li>
+<li><strong>go through internal change control processes to deploy and confirm necessary fixes to some portion, or all of the production systems</strong>.  When test results match expectations, deploy globally.  Its unknown how fast Google can ripple a functionality change across their numerous data centers (anyone who knows, please share in the comments)</li>
+<li><strong>identify the users affected by the flaw</strong>.  They now have to develop, test and run a query against the Google Docs data repository (BigTable?) to identify which documents are affected and in turn, which users own those documents</li>
+<li>having reviewed the results they now <strong>run an update to ‘reset permissions’ on affected documents</strong> (they could do the above step and this step in one script but splitting into a 2 step approach carries less risk even if it takes longer) so that only the owner has access</li>
+<li>the Google Docs product manager  <strong>most likely consulted with the Google privacy and legal teams to understand any potential liability</strong></li>
+<li><strong>create an email template and list for notifying users</strong> and get the text of the notification email approved by the product manager, privacy, PR and possibly legal</li>
+<li>the PR team <strong>prepare standard responses ready to respond to comments from the media</strong></li>
+<li><strong>prime Google Support</strong> ready to handle queries from concerned users</li>
+<li><strong>issue the notification email to affected users</strong>.  Note, at time of posting, Google had not posted this issue to either their security blog or the Google Docs blog.  Given their strategy to identify, notify and protect affected users (the “sniper” IR strategy ;-), its arguable they don’t actually need to although I suspect they might</li>
+<li>create Google alerts on phrases in the notification email to see on which web properties it is reported to perform reputation monitoring ;-)</li>
+<li><strong>perform a Root Cause Analysis</strong> (RCA) on the coding snafu and implement changes to reduce/eliminate future occurences</li>
+</ul>
+<p><strong>Even if they skipped some of the non-essential steps, that’s a *lot* to achieve in the timeframe</strong> especially as we don’t know what other issues Google Security may be fielding at the same time (its rare that only person reports an a potential security weakness in widely used software/services, let alone additional security reports that range from completely bogus to potentially valid).</p>
+<p><strong>In a nutshell, I’m impressed with the speed Google executed on this.  To put their response in perspective, compare how long it takes some credit card payment processors to react to major data breaches.</strong></p>
+<p>Hats off to Google Security on this one…</p>

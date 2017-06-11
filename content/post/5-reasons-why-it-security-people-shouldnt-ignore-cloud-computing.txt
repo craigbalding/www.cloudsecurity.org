@@ -1,0 +1,30 @@
+--- 
+title:      5 Reasons Why IT Security People Shouldn’t Ignore Cloud Computing
+created_at: 2008-04-22 22:17:55 Z
+description: "Security professionals often dismiss cloud computing as hype or a label for mainframe service models.  Here are 5 reasons why you should pay attention."
+author:     Craig Balding
+blog_post:  true
+tags:
+- Cloud Computing Security
+- employment
+- investment
+- outsourcing
+
+--- 
+<p><a href='http://www.flickr.com/photos/54168635@N00/234838351/' title='What a job!' target='_blank'><img title='5 Reasons Why IT Security People Shouldnt Ignore Cloud Computing' src='http://farm1.static.flickr.com/90/234838351_6879b2ab3a_m.jpg' border='0' alt='What a job!'/></a></p>
+<p>You’ve read the headlines.  You’ve heard the buzzwords.  </p>
+<p>Cloud Computing just seems like hype, right?  </p>
+<p>“But it’s just another technology getting hyped to the max”.</p>
+<p>The <em>best case scenario</em> is that your analysis is correct and you can go back to reading Slashdot and Daily Dave (you are reading Daily Dave aren’t you?).  You can pride yourself on your ability to recognise web hysteria and laugh at the losers that invested, wrote blog posts (!) and dared to take it seriously.</p>
+<p>OK.  Now lets flip that around and just say for a moment you’re wrong - that Cloud Computing turns out to be a huge deal and takes off.  What could that mean for your day job?  No in-house servers to secure?  No in-house security operations to deal with? No in-house penetration tests to run?  No vulnerability assessment tools to run? No incident response where you actually ‘do something’?  </p>
+<p>One scenario is you find yourself on a constant round of conference calls with 3rd parties trying to ‘pin down’ security in the cloud…  If you thought handling security issues associated with outsourcing was painful and slow, the Cloud will bring a multitude of competing providers that decision makers can switch from ‘digitally’ when the numbers ($$) make sense.</p>
+<p>As the person responsible for your employer’s security arrangements, you may want to consider these 5 reasons for not dismissing Cloud Computing out of hand:</p>
+<ul>
+<li><strong>Unless you work for an IT company, your employer did not go into business to ‘do IT’.</strong>  They are in business to sell a product or a service - in-house IT may have enabled that up to now but it was out of need rather than desire.  Cloud Computing has hit the cover of popular business magazines - its starting to get on the radar of CEO’s that ask questions like ‘how can I cut my costs?’, ‘how can I make my business more agile?’.  They may not switch overnight, but once the first goes in a given vertical, the clock is ticking.</li>
+<li><strong>The temptation to contractually outsource security responsibility.</strong>  ”Our customer data got stolen from a cloud storage provider - not us - we don’t run IT!”.  Sure the buck stops with the org from a regulatory perspective but media coverage around recent data leakages involving 3rd party providers elicits a mixed reaction and thus diffuses the “reputation issues” to some extent.</li>
+<li><strong>The skills you need to deal with Cloud Security may be different from the skills you have today.</strong>  Your “window” on Cloud security will be what the Cloud Provider gives you.  Beyond that you may be able to do an on-site audit from time to time but its a shared facility so no monkey in a cage pen-testing, scanning or filesystem forensic analysis.</li>
+<li><strong>There’s a large cloud forming over the horizon.</strong>  The level of investment by providers doesn’t bear ignoring.  IBM, Google, Amazon, Microsoft and others are ploughing hundreds of millions of dollars building out data centers specifically for Cloud Computing.</li>
+<li><strong>You may just end up working for the Cloud Provider!</strong>  This is something I believe will start happening in the next 2-3 years.  If you need a second opinion, go see <a href='http://taosecurity.blogspot.com/2008/04/cloudsecurityorg.html'>Richard Bejtlich’s blog</a> when he shared his own perspective.</li>
+</ul>
+<p>What say you?  Hype or pending reality?</p>
+

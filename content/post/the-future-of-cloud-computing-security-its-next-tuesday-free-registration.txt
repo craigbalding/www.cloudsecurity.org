@@ -1,0 +1,20 @@
+---
+title:      "The Future of Cloud Computing Security: It’s Next Wednesday [Not Tuesday!] (Free Registration)"
+created_at: 2009-12-04 12:03:00 Z
+author:     Craig Balding
+blog_post:  true
+tags:
+- Cloud Computing Security
+- Black Hat
+
+--- 
+<p>Next <span style="text-decoration: line-through;">Tuesday</span> Wednesday (!) I'll be part of a virtual panel as part of a on-line event organised by <span class="text">InformationWeek’s Dark Reading and  Black Hat. </span>I encourage you to virtually attend as it promises to be an excellent Cloud/Virtualization Security discussion.  You can register for free <a title="IT Security: The Next Decade - Registration" href="https://www.techwebonlineevents.com/ars/eventregistration.do?mode=eventreg&amp;F=1001916&amp;K=BBHE">here</a>.</p>
+<p>The session will be hosted by my good friend and co-host of the Cloud Security Podcast, <a title="Rational Survivability" href="http://rationalsurvivability.com/blog">Chris Hoff</a>.</p>
+<p>In addition to the expertise that Chris brings to the table, the other guests are all hardcore in their own right.  I promise you'll learn something - I'm pretty sure I will!</p>
+<p>Here's the blurb:</p>
+<blockquote><p><em><strong>Virtualization, Cloud Computing,  And Next-Generation Security</strong></em></p>
+<p><em>The concept of cloud computing creates new challenges for security, because sensitive data may no longer reside on dedicated hardware.  How can enterprises protect their most sensitive data in the rapidly-evolving world of shared computing resources? In this panel, Black Hat researchers who have found vulnerabilities in the cloud and software-as-a-service models meet other experts on virtualization and cloud computing to discuss the question of cloud computing’s impact on security and the steps that will be required to protect data in cloud environments.</em></p>
+<p><em>Panelists: Glenn Brunette, Distinguished Engineer and Chief Security Architect, Sun Microsystems; Edward Haletky, Virtualization Security Expert; Chris Wolf, Virtualization Analyst, Burton Group; Jon Oberheide, Security Researcher; Craig Balding, Cloud Security Expert, cloudsecurity.org</em></p>
+<p><em>Moderator:  Christofer Hoff,  Contributing Editor, Black Hat</em></p></blockquote>
+<p>Register for free <a title="IT Security: The Next Decade - Registration" href="https://www.techwebonlineevents.com/ars/eventregistration.do?mode=eventreg&amp;F=1001916&amp;K=BBHE">here</a>.</p>
+

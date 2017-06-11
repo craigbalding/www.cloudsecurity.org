@@ -1,0 +1,21 @@
+--- 
+title:      "Compliance as a Service: Does It Exist?"
+description: "Compliance as a Service could provide a means to bind your company security policy and regulations to your use of cloud services and APIs"
+created_at: 2009-03-27 11:12:56 Z
+author:     Craig Balding
+blog_post:  true
+tags:
+- Cloud Computing Security
+
+--- 
+<p>Peter Coffee from Salesforce.com was <a href='http://www.computerworld.com.au/article/297054/cloud_computing_may_spawn_compliance_service'>recently quoted in the Australian edition of Computer Weekly</a> talking about the prospect of Compliance as a Service:</p>
+<blockquote>
+<p class='storybody'>“There are composite solutions [to compliance issues]: build the application in the cloud using nothing but anonymous tokens to identify customers… but that is not trivially easy to do,” he said.</p>
+<p class='storybody'>“Instead, <strong>compliance as a service maybe be offered where [the service provider] acts as an intermediate layer of your application that takes care of a variety of things. They could indemnify the customer against any issues around personally identifiable information crossing boundaries.”</strong></p>
+<p class='storybody'>Under such a compliance service, <strong>a service provider would accept the burden of knowing the rules, court precedents and regulations which are industry-specific</strong>, Coffee said. Responsibility to sanitise data wherever it left the country over a broadband link would move from the customer to the service provider.</p>
+<p class='storybody'>“Layers upon layers of new services will emerge representing new layers of expertise and therefore new layers of profitability for those providing services with that kind of value. I think that’s happening now and more so all the time.”</p>
+</blockquote>
+<p class='storybody'>If you consider the cost, complexity, misinterpretations and challenges that organisations face trying to be ‘compliant’ today with their in-house IT, <strong>“Compliance as a Service” (CaaS) has to be a Cloud marketeer’s dream!</strong></p>
+<p class='storybody'><strong>More seriously, how else can you enforce continued compliance across multiple service providers?</strong> This comes back to the notion of packaging security policy along with data, such that in a multi-Cloud provider environment, there is a way to establish automagically who can meet the policy requirements on a dynamic basis.  But would you trust the digital word of the providers?  A provider could accidentally or intentionally affirm compliance with a digitally transmitted policy and go on to accept/process workloads in Clouds that are not suitable/compliant for the data.</p>
+<p class='storybody'><strong>Could a 3rd party CaaS inserted “man in the middle” style, act as a trusted arbitrator? </strong> If a CaaS provider offers to bear liability for compliance misses and was able to satisfactorily hide the complexity of compliance for the right price, you could foresee such a provider establishing a dominant position in the Cloud-o-sphere.</p>
+<p class='storybody'>Right now though, this is all speculation on my part.  <strong>Does anyone know of such a service or are you developing one?</strong> I’d love to <a href='http://cloudsecurity.org/contact/'>hear about it</a>.</p>

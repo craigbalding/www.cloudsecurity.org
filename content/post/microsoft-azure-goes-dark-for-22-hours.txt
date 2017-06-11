@@ -1,0 +1,22 @@
+--- 
+title:      Microsoft Azure Goes Dark For 22 Hours
+description: "The Microsoft Azure Technology Preview suffered a major outage that lasted 22 hours."
+created_at: 2009-03-15 20:16:16 Z
+author:     Craig Balding
+blog_post:  true
+tags:
+- Platform as a Service
+- Azure
+
+--- 
+<p>Forget concerns about <a href='http://cloudsecurity.org/2009/03/14/what-does-pci-compliance-in-the-cloud-really-mean/'>PCI</a> and <a href='http://cloudsecurity.org/2009/03/15/amazon-reserved-instances-always-read-the-label/'>DR in the Clouds</a> - Microsoft Azure just recovered from being offline for 22 hours.</p>
+<p>The Azure Cloud is currently in Technology Preview mode which means unscheduled developer holidays are pre-baked in.</p>
+<p>I haven’t written about Azure before (tut tut), however I have been following along.</p>
+<p>In case you somehow missed the announcement from Ray Ozzie, this is the Azure Stack.</p>
+<p><img class='center' title='Microsoft Azure Services' src='/files/About_-_What_is_the_Azure_Services_Platform%3F_%7C_Azure_Services_Platform-20090315-205153.jpg' height='253' alt='About_-_What_is_the_Azure_Services_Platform%3F_%7C_Azure_Services_Platform-20090315-205153 Microsoft Azure Goes Dark For 22 Hours' width='516'/></p>
+<p>And this is what it looked like to the Azure development community for the past 22 hours:</p>
+<p><img class='center' title='When Azure Goes Dark' src='/files/About_-_What_is_the_Azure_Services_Platform%3F_%7C_Azure_Services_Platform-20090315-205433.jpg' height='253' alt='About_-_What_is_the_Azure_Services_Platform%3F_%7C_Azure_Services_Platform-20090315-205433 Microsoft Azure Goes Dark For 22 Hours' width='516'/></p>
+<p>As seems to be the case for Cloud outages, updates are posted to a support forum.  Here is all anyone knows thus far (via <a href='http://oakleafblog.blogspot.com/2009/03/azure-services-outage-3132009-brief.html'>Oakleaf Systems</a>):</p>
+<p><img class='center' title='Azure Support Forum Outage Update' src='/files/OakLeaf_Systems__Azure_Services_Outage_3_13_2009_%E2%80%93_A_Brief_History-20090315-210308.jpg' height='558' alt='OakLeaf_Systems__Azure_Services_Outage_3_13_2009_%E2%80%93_A_Brief_History-20090315-210308 Microsoft Azure Goes Dark For 22 Hours' width='421'/></p>
+<p>This was obviously a significant outage and it will be interesting to understand the root cause.  These massively distributed systems are truly an enormous engineering challenge - we’ll wait to see what Microsoft (and others) can learn from this particular incident.</p>
+<p>I look forward to exploring the security aspects of Azure with you in the upcoming weeks.</p>

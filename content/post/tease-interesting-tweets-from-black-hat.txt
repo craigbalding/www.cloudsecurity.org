@@ -1,0 +1,16 @@
+--- 
+title:      "Tease: Interesting Tweets from Black Hat"
+created_at: 2009-07-31 12:08:50 Z
+author:     Craig Balding
+blog_post:  true
+tags:
+- Cloud Computing Security
+
+--- 
+<p>Despite what the cynics say, Twitter is  extremely valuable to track and participate in conversations about cloud computing/security, aswell as information security in general.</p>
+<p>For those of us that didn’t make it to Black Hat USA/Defcon, the infosec twitter community gave us the next best thing - a running commentary of the presentations - many of which feature cutting edge security research.</p>
+<p>I was particularly interested in following the <a href='http://sensepost.com/'>Sensepost</a> presentation called ‘Clobbering the Cloud’.  From the write-up:</p>
+<blockquote><p>Cloud Computing dominates the headlines these days but like most paradigm changes this introduces new risks and new opportunities for us to consider. Some deep technical research has gone into the underlying technologies (like Virtualization) but to some extent this serves only to muddy the waters when considering the overall threat landscape. During this talk, SensePost will attempt to separate fact from fiction while walking through several real-world attacks on “the cloud.” The talk will focus both on attacks against the cloud and on using these platforms as attack tools for general Internet mayhem. For purposes of demonstration we will focus most of our demos and attacks against the big players…</p></blockquote>
+<p>In reverse order, check out the tweets from <a href='https://twitter.com/GphreakX'>@GphreakX</a> who was at BH and kindly tweeting proceedings:</p>
+<p><img class='center' title='Clobbering the Cloud Tweetage' src='/files/GphreakX_%28GphreakX%29_on_Twitter-20090731-140119.jpg' height='562' alt='GphreakX_%28GphreakX%29_on_Twitter-20090731-140119 Tease: Interesting Tweets from Black Hat' width='433'/></p>
+<p>Some interesting tweets there for sure!  Hopefully this has whet your appetite for the upcoming cloudsecurity.org interview with Haroon and his Sensepost team…stay tuned.</p>

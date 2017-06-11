@@ -1,0 +1,24 @@
+--- 
+title:      "Thin Client Security: Wise up!"
+created_at: 2008-04-18 23:36:44 Z
+description: "Thin clients offer less features and expose less attack surface.  But cleartext and proprietary protocols combined with weak security controls undermine their overall security."
+author:     Craig Balding
+blog_post:  true
+filter:
+- textile
+tags:
+- Cloud Computing Security
+- thin clients
+
+--- 
+!/files/2008/04/3-wise-monkeys.gif(3 Wise Monkeys)!
+Thin Clients are an obvious choice for connecting users to the Cloud.  In theory its a minimal attack surface.  Amongst other things, diskless clients nicely sidestep the “data at rest” protection issues.
+
+So why do some "thin client vendors":http://www.wyse.com/products/hardware/thinclients/V10L/index.asp just not “get” these 3 things:
+
+* Security people expect you to provide a secure, vendor independent method for thin client OS updates.  FTP for software updates took its place in the infosec “wall of shame” a while back.  Ditto DHCP.
+* Bragging that your unpublished API makes your thin client OS secure loses you so much credibility.  _A hint: you will want to engage a qualified 3rd party to “flex” your API in the same way an adversary would._
+
+bq. ...with an unpublished API, Wyse Thin OS is one of the most secure operating systems on the market.
+
+With 128MB of Flash, insecure update methods and an “unpublished API”, I’d say that makes you a target..

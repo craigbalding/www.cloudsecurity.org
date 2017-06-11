@@ -1,0 +1,22 @@
+--- 
+title:      IGT2008 World Cloud Computing Summit Videos Now Online
+created_at: 2009-01-16 11:27:45 Z
+description: "Craig Balding talks about the security challenges of cloud computing at the IGT2008 World Cloud Computing Summit [video]"
+author:     Craig Balding
+blog_post:  true
+tags:
+- Cloud Computing Security
+- presentations
+
+--- 
+<p><img class='alignleft' title='IGT2008 World Cloud Computing Summit Videos Now Online' src='http://www.grid.org.il/_Pics/logoGrid.jpg' height='113' alt='IGT logo' style='float: left; border: 0; margin-left: 7px; margin-right: 7px; margin-top: 3px; margin-bottom: 3px;' width='190'/></p>
+<p>Shortly before the holiday break, I presented my take on Cloud Computing and Security at the IGT2008 World Cloud Computing Summit in Tel Aviv, Israel.</p>
+<p>This was a great conference for me personally as it was an opportunity to meet face to face with some very smart people that are passionate about the Cloud.  It also provided an even greater insight into the steamroller that is the Cloud - company after company lining up to either “Clouderize” their current offerings or in most cases, “doing something new”.  I met a few startups looking to solve some tricky problem including a stealth mode security outfit looking to provide enhanced security for SaaS (I can’t say more right now but watch this space).</p>
+<p>The main thrust of my talk was that there needs to be a deeper conversation about the security implications of Cloud Computing and Cloud Services in general.  That’s not because I think there is anything innately insecure about Cloud offerings, more that we are venturing into the great unknown with layers of offerings, greater trust transitivity and new (and old) technologies meshed together in ways we frankly don’t understand.  We need to progress the dialogue beyond crying out that the ‘Cloud is insecure’ or just saying <a href='http://cloudsecurity.org/2008/10/14/biggest-cloud-challenge-security/'>‘the biggest Cloud issue is security’</a> and get into the nitty gritty details.  But my argument is we can only do that if the providers engage in that conversation.  It’s one of the reasons I encourage Cloud providers to reach out and talk security - most large enterprises have responsibilities that mean they cannot treat the Cloud as a black box.</p>
+<p>The 25 minute talk is split into 2 parts:</p>
+<ul>
+<li>after a brief intro - I believe I was the only one there not representing a company - I laid out what I mean by ’security’.  As this wasn’t an information security conference and there was a wide range of people present, I wanted to lay out what I mean by “information security” to provide context for what was to follow.  If you’ve been “doing” enterprise security for years, you can safely skip the first 10 minutes (unless you want to critique me!).</li>
+<li>the second half focused on the need for a new risk model that better represents the ebb and flow of risk in Cloud environments - especially with <a href='http://cloudsecurity.org/2008/04/24/cloud-stacks-please-mind-the-gap/'>Cloud Stacks</a> (if someone has a better term, let me know) followed by the Enterprise Cloud Security version of “Hot or Not” - complete with audience voting.  Given that some of the providers I’d included in the game were sitting in the audience, this sparked some decent conversations later that evening.  If you are a Cloud provider featured in the presentation and you didn’t catch my talk, feel free to contact me to discuss your “<em>hotness</em>” ;-).</li>
+</ul>
+<p>The <a href='http://video.new-app.com/customers/grid/IGT2008/main.html' title='Videos from IGT2008 Cloud Computing'>videos are now online</a> (IE only), along with the slides.  My talk was on <a href='http://video.new-app.com/customers/grid/IGT2008/main2.html' title='Videos from Day 2 of IGT2008'>Day 2</a> in the afternoon (halfway down the right hand side).  I welcome your feedback - feel free to leave comments or ask questions.</p>
+<p>You also want to check out the Security Panel on <a href='http://video.new-app.com/customers/grid/IGT2008/main1.html' title='Videos from Day 1 of IGT2008'>Day 1</a> hosted by Sam Bercovici.  <a href='http://pages.cs.wisc.edu/~bart/'>Professor Barton P. Miller</a> and <a href='http://www.cohesiveft.com/alexisrichardson/'>Alexis Richardson</a> from <a href='http://www.cohesiveft.com/index.php'>CohesiveFT</a> and myself.</p>

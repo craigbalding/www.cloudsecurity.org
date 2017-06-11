@@ -1,0 +1,46 @@
+--- 
+title:      Stop the Madness!  Cloud Onboarding Audits - An Open Question…
+description: "Cloud providers are suffering an Audit Denial of Service as customer security teams conduct reviews.  How can we eliminate unncessary duplication and gain digital trust of claims?" 
+created_at: 2009-06-16 10:32:06 Z
+author:     Craig Balding
+blog_post:  true
+fave:       2
+tags:
+- Cloud Computing Security
+- audit
+- compliance
+
+--- 
+<p>Have you ever performed a security review or audit of a 3rd party hosting provider before your employer signs on the dotted line?  Did you ever “have that moment?”.  It’s that time when exhausted from review fatigue you find yourself banging your head on the desk screaming ‘there must be a faster way’.  Well, you’re not the only one…</p>
+<p><strong>The scene goes something like this:</strong></p>
+<p>The provider rolls their eyes as yet another customer security team sends in their 500 deeply probing security questions, transmitted in some homegrown template in Word, Excel or $diety forbid, Powerpoint.  The customer security team, naturally suspicious of the provider and irked by managements apparent keenness to outsource the farm, has created the security questionnaire from hell:</p>
+<ul>
+<li> it’s the result of 100 hours of internal team meetings</li>
+<li>it’s gone through 14 drafts, 20 reviewers inboxes, 76 yellow highlighter comment fields and was printed at least 6 times</li>
+<li>it only asks IT security questions (no input from other relevant functions such legal/compliance/audit - HA!)</li>
+<li>it’s laced with a few tricky landmine questions based on potential security issues raised (but not satisfactorily answered) in online forums and provider support forums</li>
+<li>it contains 25 attachments detailing all the company security policies that *must* be followed (huh, Bluetooth policy requirements for a cloud storage provider…interesting)</li>
+</ul>
+<p><strong>In the context of cloud providers, they are slammed - <a href='http://www.rationalsurvivability.com/blog/?p=877'>a raft of audits in progress right now</a> - with more expected soon</strong>.  The provider is experiencing an ADoS (Audit Denial of Service).  Instead of innovating new service offerings (including security!), the talented security professional at the provider is stuck cut and pasting answers from internal cheatsheets to customers questionnaires in the knowledge that the customer likely has no idea how much money it would cost to fulfill some of these security requests.  The sheer number of questions is confusing given that the customer IT team had stated they were only looking to host non-critical, non-sensitive data…</p>
+<p><strong>Audits are time consuming, repetitive across customers, costly and generally a motivational drain for everyone involved</strong>.  Moreover in the context of Cloud, time consuming audits seriously delays a key benefit of cloud - agility.  Its the “on demand” part of “Infrastructure on demand” that is a primary benefit of cloud.  If the security review process takes 3 months to complete, how much business opportunity has your employer lost?  Don’t like that question?  OK, another one: how much time could you have spent doing something more interesting?</p>
+<p><strong>Which leads me to some questions:</strong></p>
+<ul>
+<li>what does the cost/benefit ratio look like of the “questionnaire security review method”? (to be clear, I’m not arguing against the need for security reviews)</li>
+<li>why do we all use different format questionnaires? (note: format)</li>
+<li>why are we asking these questions? (are the bulk of our questions simply an expression of our policy asked in a question format?)</li>
+<li>how many of these questions/policies are predictable and duplicated?  As in, you and I ask some of the same questions…we may differ in the details (e.g. password complexity..eek!) but we both probably ask the same base question even if our thresholds around answers are slightly different.</li>
+<li>what if we were to agree a set of common questions/policy statements?  We don’t all have to subscribe to them, we can pick the ones that reflect our policy…  There could be thousands, you search, pick and mix just like an iTunes playlist (Ed: Genius!)</li>
+<li>for those standard policy questions, could we “digitize” them and express them electronically?  Could the provider host a policy oracle that we could post these questions to?</li>
+<li>for those “uncommon” questions that the providers oracle cannot automagically answer, could we agree a standard way to “ask/transmit” those with some simple agreements about response formats? (um, freetext fields ;-).</li>
+<li>ultimately, could we “digitize” a significant portion of our questions to get near instant answers? (and could we make that multi-lingual…)</li>
+<li>would the provider recognise this as a benefit too?</li>
+<li>would the provider also see the legitimate opportunity this presents to charge for higher assurance services around cloud compute/storage/network based on our policy requirements?  “You want triple cycle, double buffering?  You got it - for an extra 5c per MB”).  Yes, the cost of  your security policies in a pay per drink model are revealed!</li>
+<li>would the provider recognise the opportunity to offer incentives to customers for choosing this low friction path of policy compliance instead of tying up their skilled employees filling out ad-hoc questionnaires?</li>
+</ul>
+<p><strong>Is there an existing system/application/protocol whereby I can transmit my policy requirements to a provider, they can respond in real-time with compliance level and any additional costs, with less structured/known requirements responded to by a human (but transmitted the same way)?  In other words, I’m looking for human driven, machine to machine policy exchange/agreement.<br/>
+</strong></p>
+<p>I propose that the benefit of quickly ascertaining policy compatibility along with any additional costs involved would reduce the on-ramp to cloud, reduce switching costs, drive a form of policy interoperability and take us closer to where we need to be in the long run: the ability to express security policy for a single unit of compute/storage/network in a cloud.  Ultimately, I want to be able to tie my security policy to the information asset I need to protect and push that to a cloud broker who performs policy reconciliation to determine which of my approved provider(s) can meet my needs without any human intervention (yeah, I can hope ;-).</p>
+<p><strong>And before everyone jumps on me and says ‘but the point of an on-site audit/security review is to get assurance that the provider is doing what they claim they are doing” I’d like to point out that policy and assurance are two different things</strong>.  Before you and the provider invest time in the optional on-site audit, why not get the bulk of the policy questions out the way in a fast and low cost manner? (i.e. “death to the questoinnaire?”).</p>
+<p><strong>If you’re following along thus far, you’ll also see the possibility for trusted 3rd party auditors to digitally ’sign’ individual policy statements made by cloud providers they have audited.</strong> That signature could itself reflect the assurance level you need.  This in turn could help drive the nascent cyberinsurance market for cloud…assuming the auditor is open to counterclaims by the insurer ;-).</p>
+<p>If you do need to go on-site (and assuming the cloud provider tells you where “on-site” is ;-), you’ll have a list of items the provider categorically stated they do, meaning you can cherry pick the areas where you want to deep dive for assurance.  If upon inspection you find reality does not match stated policy, you can scream bloody murder.  Providers that mislead customers will soon get known.</p>
+<p><strong>Thoughts?</strong></p>

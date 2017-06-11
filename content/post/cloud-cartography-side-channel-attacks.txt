@@ -1,0 +1,72 @@
+--- 
+title:      Cloud Cartography & Side Channel Attacks
+description: "Research team publish paper analyzing potential security weaknesses in Infrastructure a a Sercice cloud environmentsl"
+created_at: 2009-08-31 00:38:22 Z
+author:     Craig Balding
+blog_post:  true
+filter:
+- textile
+tags:
+- Infrastucture as a Service
+- amazon
+- DoS
+- ec2
+- mapping
+- research
+- side channel attacks
+
+--- 
+Last week, saw the release of a research paper from the University of California and MIT called "Hey, You, Get Off of My Cloud: Exploring Information Leakage in Third-Party Compute Clouds":http://people.csail.mit.edu/tromer/papers/cloudsec.pdf [PDF].
+
+The abstract reads:
+
+bq. Third-party cloud computing represents the promise of outsourcing as applied to computation. Services, such as Microsoft’s Azure and Amazon’s EC2, allow users to instantiate virtual machines (VMs) on demand and thus purchase precisely the capacity they require when they require it.  In turn, the use of virtualization allows third-party cloud providers to maximize the utilization of their sunk capital costs by multiplexing many customer VMs across a shared physical infrastructure. However, in this paper, we show that this approach can also introduce new vulnerabilities.
+Using the Amazon EC2 service as a case study, we show that it is possible to map the internal cloud infrastructure, identify where a particular target VM is likely to reside, and then instantiate new VMs until one is placed co-resident with the target. We explore how such placement can then be used to mount cross-VM side-channel attacks to extract information from a target VM on the same machine.
+
+After introducing the main concepts the threat model of the research is defined:
+
+bq. In our threat model, *adversaries are non-provider-affliated malicious parties. Victims are users running conﬁdentiality-requiring services in the cloud.*  A traditional threat in such a setting is direct compromise, where an attacker attempts remote exploitation of vulnerabilities in the software running on the system. Of course, this threat exists for cloud applications as well. These kinds of attacks (while important) are a known threat and the risks they present are understood.
+
+bq. *We instead focus on where third-party cloud computing gives attackers novel abilities; implicitly expanding the attack surface of the victim*. We assume that, like any customer, a malicious party can run and control many instances in the cloud, simply by contracting for them. Further, since the economies offered by third-party compute clouds derive from multiplexing physical infrastructure, we assume (and later validate) that an attacker’s instances might even run on the same physical hardware as potential victims. From this vantage, an attacker might manipulate shared physical resources (e.g., CPU caches, branch target buffers, network queues, etc.) to learn otherwise conﬁdential information.  *In this setting, we consider two kinds of attackers: those who cast a wide net and are interested in being able to attack some known hosted service and those focused on attacking a particular victim service.*  The latter’s task is more expensive and time-consuming than the former’s, *but both rely on the same fundamental attack.
+
+<p>Section (5) “Network Probing” lays the foundation for (6) “Cloud Cartography” through describing…</p>
+<blockquote><p>…an empirical measurement study <strong>focused on understanding VM placement in the EC2 system and achieving co-resident placement for an adversary.</strong> To do this, we make use of network probing both to identify public services hosted on EC2 and to provide evidence of co-residence (that two instances share the same physical server)</p></blockquote>
+<p>They then go on to describe the tools and techniques in:</p>
+<ul>
+<li> “enumerating public EC2-based web servers using external probes” (hping2, nmap, wget)</li>
+<li> “translating responsive public IPs to internal IPs (via DNS queries within the cloud)” (DNS)</li>
+<li> “launching a number of EC2 instances of varying types and surveying the resulting IP address assigned” (I assume this was scripted)</li>
+</ul>
+<p>Using data from booting 4,499 (!) EC2 instances across different EC2 accounts under their control (remember that by default, an EC2 account has a 20-instance soft-limit), they develop the following heuristics for mapping EC2 instances:</p>
+<ul>
+<li>All IPs from a /16 are from the same EC2 availability zone (e.g. US).</li>
+<li>A /24 inherits any included sampled instance type (e.g. small, large, x-large etc). If there are multiple instances with distinct types, then we label the /24 with each distinct type (i.e., it is ambiguous).</li>
+<li>A /24 containing a DomO IP address only contains Dom0 IP addresses. We associate to this /24 the type of the DomO’s associated instance (<em>note</em>: DomO is the first domain started by the hypervisor after boot)</li>
+<li>All /24’s between two consecutive Dom0 /24’s inherit the former’s associated type.</li>
+</ul>
+<p>They conclude this section with “cartography countermeasures”.  This boils down to making local IP address assignment (from the address pool) random across instance types and availability zones and/or restricting the customers view.</p>
+<p>Section (6) describes how to determine co-residence:</p>
+<blockquote><p>Given a set of targets, the EC2 map from the previous section educates choice of instance launch parameters for attempting to achieve placement on the same physical ma- chine. Recall that we refer to instances that are running on the same physical machine as being co-resident.</p>
+<p>In this section we describe several easy-to-implement co-residence checks.</p>
+<p>Looking ahead, our eventual check of choice will be to compare instances’ Dom0 IP addresses.</p>
+<p>We conﬁrm the accuracy of this (and other) co-residence checks by exploit- ing a hard-disk-based covert channel between EC2 instances.</p></blockquote>
+<p>They identify 3 network-based co-residence checks:</p>
+<ul>
+<li>matching Dom0 IP address</li>
+<li>small packet round-trip times</li>
+<li>numerically close internal IP addresses (e.g. within 7).</li>
+</ul>
+<p>Now able to determine that a given EC2 instance under their control is on the same physical hardware as the target, section (7) analyses EC2’s VM placement strategy and explores techniques the attacker can use to achieve reliable co-residence with a target VM.   In the context of a brute force placement attack they note that <strong>“even a very naive attack strategy can successfully achieve co-residence against a not-so-small fraction of targets”</strong>.  Thus if your target set is wide, brute force turns out to be a viable strategy.  For individual or small sets of targets, a more efficient strategy is “instance flooding” (spinning up numerous VMs) immediately after the target has booted to “take advantage of the parallel placement locality exhibited by the EC2 placement algorithms”.  This is where the dynamic nature of cloud comes into play:</p>
+<blockquote><p>But why would we expect that an attacker can launch instances soon after a particular target victim is launched?  Here the dynamic nature of cloud computing plays well into the hands of creative adversaries. Recall that one of the main features of cloud computing is to only run servers when needed. This suggests that servers are often run on instances, terminated when not needed, and later run again.  So for example, <strong>an attacker can monitor a server’s state (e.g., via network probing), wait until the instance disappears, and then if it reappears as a new instance, engage in instance ﬂooding</strong>. Even more interestingly, an attacker might be able to actively trigger new victim instances due to the use of auto scaling systems. These automatically grow the number of instances used by a service to meet increases in demand. (Examples include scalr [30] and RightGrid [28].  See also [6].) <strong>We believe clever adversaries can ﬁnd many other practical realizations of this attack scenario.</strong></p></blockquote>
+<p>With co-residence achieved, section (8) assesses the practicality of side channel attacks in a VM environment.  As you’d expect, a number of possibilities exist, however the holy grail of cryptographic key extraction does not appear plausible (at this time).  One notable quote:</p>
+<blockquote><p>The side channel attacks we report on in the rest of this section are more coarse-grained than those required to extract cryptographic keys. While this means the attacks extract less bits of information, it also means they are more robust and potentially simpler to implement in noisy environments such as EC2.</p></blockquote>
+<p>Side channel attacks discussed include:</p>
+<ul>
+<li>Denial of Service</li>
+<li>Measure cache usage (measure CPU utilisation on the physical machine; or “how busy are their servers?”)</li>
+<li>Load-based co-residence detection (aka detecting co-residence without relying on sending any network probes)</li>
+<li>Estimating traffic rates (sounds harmless but can be used to deduce targets activity patterns, peak trading times for maximal DoS effect etc)</li>
+<li>Keystroke timing attack (remote keystroke monitoring)</li>
+</ul>
+<p>As with each of the other sections, the authors suggest potential countermeasures.</p>
+<p>Overall the paper makes a very interested read.  There’s no EC2 “0-day”, but that’s not the intent of the paper.  Rather, we are reminded that cloud platforms and technologies do bring some novel attacks that thus far have not really figured in much of the security conversation to date.  We need more of this type of research to better understand what we are getting ourselves into.</p>

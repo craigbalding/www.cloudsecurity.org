@@ -1,0 +1,19 @@
+--- 
+title:      Cloud Security Threats Survey
+created_at: 2010-02-23 13:08:58.754294 +01:00
+author:     "Craig Balding"
+description: "The Cloud Security Alliance is running a survey to find out which cloud security threats security professionals are most concerned about."
+blog_post:  true
+filter:
+  - textile
+--- 
+
+Ask a room full of security professionals what cloud threats they are concerned with and you'll get quite a variety of answers.  Partly this stems from the widly varying definitions of "Cloud", but also reflects their respective experience dealing with security threats faced by their organisation.
+
+Maybe you think "insider threats" are the big issue, or perhaps you feel attacks against the shiny new attack surface offered by cloud providers is the big concern.  Or you may look at things the other way round and feel that attacks against cloud *clients* are the most significant threat - especially given what we know about client side computing, mobile professionals and insecure WiFi setups.
+
+Either way, here is a chance to express your view.
+
+Right now, the Cloud Security Alliance (CSA) is seeking your input.  They are currently finalising a paper for release at RSA 2010 next week, called the _Top Threats to Cloud Computing_.  The CSA "top threats" working group is seeking wider input on the respective ranking of 7 specific cloud threats.
+
+If you are a cloud user and/or security professional, I encourage you to "take the 5 minute survey":http://www.surveymonkey.com/s/VRPMBRM.  Results will be collected at the end of this week.

@@ -1,0 +1,21 @@
+--- 
+title:      "Cloud Ecosystem Map: Spot the Security Players"
+description: "Who are the cloud providers and what cloud services do they sell?  Find out with this cloud ecosystem map."
+created_at: 2009-03-17 22:43:08 Z
+author:     Craig Balding
+blog_post:  true
+tags:
+- Cloud Computing Security
+- Ecosystem
+- startups
+
+--- 
+<p><a href='http://www.undertheradar.com/'>Troy Angrignon</a> has put together a <a href='http://www.sandhill.com/opinion/daily_blog.php?id=64'>really useful Cloud Ecosystem Map</a>.</p>
+<p>Why is this useful?  As he states:</p>
+<blockquote><p>Following <span style='text-decoration: line-through;'>Terry Matthew’s</span> <a href='http://www.wesleyclover.com/index.php?option=com_content&task=view&id=13&Itemid=36'>Sir Terrence Matthews</a> “checkerboard model”, it should be easy going forward to <strong>f</strong><strong>ind logical areas that need to be built out</strong>. Think about it as “X for the cloud”. For example, identity management from the last era was mostly LAN/WAN-based single-sign on and directory service based. <strong>“Identity for the cloud” is a logical hole to fill</strong> and sure enough, that is what <a href='http://www.symplified.com/' target='_blank'>Symplified</a> is aiming to do.</p></blockquote>
+<p>The map shows the companies along the X axis and the service offerings on the Y axis.</p>
+<p><a href='http://corporateecoforum.com/assets/pdf/EcoSystemMapr20b.pdf'><img class='center' title='Cloud Computing Ecosystem Map' src='/files/ccesImage2-20090317-233218.jpg' height='396' alt='ccesImage2-20090317-233218 Cloud Ecosystem Map: Spot the Security Players' width='500'/></a></p>
+<p style='text-align: center;'>Click the screenshot for the full PDF</p>
+<p>As you go through the map, do you spot any security opportunities?  I thought I’d see more security offerings listed but I don’t.  If that doesn’t scream ‘<a href='http://cloudsecurity.org/2009/03/11/cloud-security-startups-where-for-art-thou/'>gap in the market</a>‘ I don’t know what does!</p>
+<p>Troy is looking for feedback - as he says, its version 1.0.</p>
+<p>Let me know what you think in the comments.</p>

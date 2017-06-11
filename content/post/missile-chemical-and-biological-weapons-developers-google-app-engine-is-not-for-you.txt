@@ -1,0 +1,18 @@
+--- 
+title:      "Missile, Chemical and Biological Weapons Developers:  Google App Engine Is Not For You"
+description: "Always read the terms and conditions before signing up for a cloud service.  Especially if you are a weapons developer."
+created_at: 2009-04-08 18:57:55 Z
+author:     Craig Balding
+blog_post:  true
+tags:
+- Platform as a Service
+- Google App Engine
+- terms of service
+
+--- 
+<p><img class='left' title='Google App Engine' src='/files/Google_App_Engine_-_Google_Code-20090408-205423.jpg' height='165' alt='Google_App_Engine_-_Google_Code-20090408-205423 Missile, Chemical and Biological Weapons Developers:  Google App Engine Is Not For You' width='198'/> A lightning post to highlight a recent change to the <a href='http://code.google.com/appengine/terms.html'>Google App Engine Terms of Service.<br/>
+</a><br/>
+Clause 2.2 just had some text added to it:</p>
+<blockquote><p>“You agree not to use the Service in the design, development, production, or use of missiles or the design, development, production, stockpiling, or use of chemical or biological weapons.”</p></blockquote>
+<p>I’m glad they cleared that up - now all the bad guys know to use Amazon AWS or Microsoft Azure.</p>
+<p>P.S I can’t help feeling the irony, given the App Engine logo…</p>

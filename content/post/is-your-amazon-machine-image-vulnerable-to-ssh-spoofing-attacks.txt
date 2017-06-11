@@ -1,0 +1,41 @@
+--- 
+title:      Is Your Amazon Machine Image Vulnerable to SSH Spoofing Attacks?
+created_at: 2008-07-14 16:26:40 Z
+description: "Amazon posted a forum message stating they had fixed a vulnerability in their cloud copmuting environment."
+author:     Craig Balding
+blog_post:  true
+filter:
+- textile
+tags:
+- Cloud Computing Security
+- amazon
+- aws
+- disclosure
+- ssh
+
+--- 
+!/files/2008/07/ssh-clones-may-bite.jpg(SSH - Clones may bites)!
+
+On the 23rd June, Amazon quietly rolled out a <a href='http://docs.amazonwebservices.com/AWSEC2/2008-02-01/GettingStartedGuide/running-an-instance.html#connecting-to-an-instance'>security fix</a> for an issue <a href='http://developer.amazonwebservices.com/connect/thread.jspa?threadID=21867&start=0&tstart=0'>originally discussed</a> in the Amazon developer forums.  Amazon <a href='http://docs.amazonwebservices.com/AWSEC2/2008-02-01/GettingStartedGuide/index.html?WhatsNew.html'>documentation</a> was revised to reflect the change as follows:</p>
+<blockquote><p>“Amazon <acronym class='acronym'>EC2</acronym> public <acronym class='acronym'>AMI</acronym>s (<a href='http://www.amazon.com/gp/browse.html?node=201590011'>Amazon Machine Image</a>) generate unique SSH (<a href='http://www.openssh.org/'>Secure Shell</a>) <strong>host </strong>keys each time you              launch an instance. This enables you to get the host SSH keys from the              console output and verify the host to which you are connecting.”</p></blockquote>
+<blockquote><p>Important note: SSH <em>host </em>keys enable clients to verify the server identity (”are you really my server?”) and are separate from SSH <em>user </em>keys that allow the user to prove their identity to the server (”he really is Jeff”).</p></blockquote>
+<h4>What does this mean?</h4>
+<p>It means that EC2 instances created from a public AMI after June 23rd have unique SSH <strong>host </strong>keys and thus are not vulnerable to a man in the middle attack against the SSH protocol, but only *if* you manually verify the <strong>host</strong> SSH key during your <strong>initial </strong>SSH connection.</p>
+<h4>OK, but I created my AMI before June 23rd - am I vulnerable?</h4>
+<p>According to Amazon, yes.  Every EC2 instance copied from a public AMI will have the same SSH host keys as the original AMI.  The only exception to this is if the original AMI creator spotted this problem and used a hook to force SSH host key regeneration upon first boot.  This means that an attacker who say, uses a <a href='http://www.us-cert.gov/cas/techalerts/TA08-190B.html'>DNS cache poisoning attack</a>, can intercept the communication between your SSH client and your AMI.</p>
+<h4>How can I fix my pre-June 23rd AMIs?</h4>
+<p>Regenerate the SSH host key.  The exact commands will depend on your operating system (hint: ssh-keygen).</p>
+<h4>Who is to blame?</h4>
+<p>Either the creators of the original AMI or Amazon - depends how you look at it.  If Amazon created the public AMI then it could be argued they are responsible.  However, anyone can submit a public AMI and Amazon makes no guarantee they are fit for use (Amazon do review the AMI listing according to their documentation).</p>
+<p>Amazon can in fact make the argument they are acting in the interests of their users by implementing a shared solution to key regeneration (rather than requiring each user to manually regenerate the ssh host keys after booting an image).   That’s fine going forward but what of potential exposure to customers using the pre-June 23rd public AMI copies?</p>
+<p>Just to be clear, its not the fault of SSH - ’secure channels’ require proper key management and the need for unique host keys is well documented.</p>
+<h4>Are there any mitigating factors?</h4>
+<p>Yes, if you have used security groups to limit SSH access to your AMI from IP ranges you trust (rather than the entire Internet).  You’ll still want to regenerate the ssh host keys sooner than later.</p>
+<h4>Is the Amazon environment vulnerable to Man-in-the-middle attacks?</h4>
+<p>I don’t know.  But that isn’t the real question - is the path between you and your AMI immune to MITM attacks and the answer is most definitely no.  If SSH on your AMI is only accessible from another AMI then its a fair question but its unlikely Amazon are going to show you their network diagrams ;-).  From experience performing MITM attacks, I would assume most networks are vulnerable (one of the reasons why we use SSH).</p>
+<h4>Why Didn’t Amazon Tell Me I’m Vulnerable?  They know from their logs what AMIs I use!</h4>
+<p>Didn’t they?  Whoops - naughty Amazon :P.</p>
+<p>But seriously, Amazon are not responsible for the configuration of the public AMIs you use.  Its important not to confuse the AMI selection and cloning mechanism that Amazon provides, with the content of an AMI itself.</p>
+<h4>Does Amazon have a mailing list for customers to learn about new security problems (even if its not Amazon’s fault).</h4>
+<p>Not that I know of.   Right now you have to search forum posts and monitor documentation updates - which is time consuming and makes it easy to miss something.  I also can’t find an area on the AWS website where they collect security related items together (e.g. best practices, advisories, key management).   In my view, this is a shame as it probably undermines the effort that Amazon are putting into their security  (for some customers, if they don’t “see it”, it doesn’t “exist”).</p>
+<p>A ‘Security’ link on the main AWS homepage pointing to those resources would go a long way to improving the visibility of the AWS security related information.</p>

@@ -1,0 +1,25 @@
+--- 
+title:      Are You Trying to Pin the Tail on the Cloud Donkey?
+created_at: 2010-01-25 01:14:15.662953 +01:00
+description: "When it comes to security due diligence and on-going operational security visibility of cloud services, enterprise security pros are acting out the childrens game, Pin the Tail on the Donkey."
+blog_post:  true
+filter:
+  - textile
+tags:
+  - A6
+  - visibility
+--- 
+p=. !http://farm3.static.flickr.com/2427/3771419019_b8a078f79f_d.jpg(Pin the Tail on the Donkey Game)!
+
+Today, when it comes to security due diligence and on-going operational security visibility of cloud services, enterprise security pros are acting out the childrens game, Pin the Tail on the Donkey.
+
+With security policy in hand, we're groping around, blindfolded by a lack of security visibility whilst disoriented by the scale and combination of new (and old) technologies and service models.  The Cloud Donkey - known for a strong sense of preservation - looks on.
+
+The problem is that there are many donkeys, and even more tails.  Worse, we're all trying to stick different tails on the same donkeys.
+
+If we don't like what we're (not) seeing, we can either moan about our predicament or try to change things.  Like collaborating with others that share the same concerns to develop the "Audit, Assertion, Assessment, and Assurance API (A6)" for cloud services.
+
+If you're a security pro, don't be an ass, "join the A6 security group":http://groups.google.com/group/A6WG.
+
+
+p>. _Photo credit: "cherrypatter":http://www.flickr.com/photos/31418704@N02/_

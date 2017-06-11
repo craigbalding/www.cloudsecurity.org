@@ -1,0 +1,39 @@
+--- 
+title:      "Security In The Cloud: Introducing Cloud Mashups"
+created_at: 2008-04-21 16:40:49 Z
+description: "A cloud service may be composed of multiple cloud provider offerings.  Security reviews need to consider the risk posed by API mashups on supply chain security." 
+author:     Craig Balding
+blog_post:  true
+tags:
+- Cloud Computing Security
+- api
+- appirio
+- mashups
+- portability
+- SaaS
+- salesforce.com
+
+--- 
+<p><a href='http://www.flickr.com/photos/69108241@N00/461971284/' title='Mashed up clouds!' target='_blank'><img class='.flickr' title='Security In The Cloud: Introducing Cloud Mashups' src='http://farm1.static.flickr.com/231/461971284_9aff22d0a6_m.jpg' border='0' alt='Cloud Mashup' style='margin: 3px;'/></a></p>
+<p>“Security in the cloud” just got more complicated with the introduction of “Cloud Mashups”.</p>
+<p><a href='http://www.appirio.com/blog/2008/04/narinder-singh-what-do-you-get-when-you.php'>What Do You Get When You Cross Salesforce.com and Amazon S3?</a></p>
+<p>The answer we are told is Appirio Cloud Storage - a fully integrated Salesforce.com add-on that uses Amazon’s Simple Storage Service (S3) to store larger files.  Previously, Salesforce.com users were limited to 5MB file uploads.</p>
+<p>Read this quote from Appirio and think about it from a security perspective:</p>
+<blockquote><p>We’re excited not only about the service itself, but also what it represents. It shows where the industry as a whole can head - as the platforms mature, there is a <strong>substantial opportunity for ISVs to tie together the different clouds and provide offerings that extend and fill in the platforms themselves</strong>. In traditional enterprise application integration (EAI), packaged integrations were difficult to commercialize. The permutation of versions and customizations created and “n times n” problem, making it too expensive to create something “packaged” that appealed to more than a very small number of customers. But in the cloud, because SaaS providers commit to stable interfaces - Salesforce has maintained backwards compatability for more than a dozen revisions of its API - <strong>“integrating the cloud” can become a new class of solution</strong>.</p></blockquote>
+<p>From a security risk assessment perspective, you now need to factor in 3rd parties that hook into your “primary” cloud providers API.</p>
+<p>If your company goes with Appirio, company data is now stored in Amazon S3 buckets paid for by Appirio, instead of storage paid for by Salesforce.com. This means your data is actually split across both providers (!) - old attachments and CRM data with Salesforce.com and new attachments with Appirio (if someone from Appirio is reading this and can say differently, please do).</p>
+<p>As it happens, Salesforce.com already uses Amazon for computing and storage so its the same back-end storage.   But what happens when another cloud storage provider pops up that offers a better deal?  Lets say salesforce.com stays with Amazon S3 but Appirio migrates to the new player to attract more customers.  [Just to be clear, not picking on Appirio here - this applies to *any* ISV - particularly those that store data somewhere else in the Cloud].</p>
+<p>Multiple cloud storage providers for a single app, raises some issues.</p>
+<ul>
+<li>Is ISV obligated to tell you they are migrating to a cheaper cloud storage provider? (think cross border data transfer issues).</li>
+<li>What security ‘certification’ will take place of the new provider and what visibility will you have of that?</li>
+<li>How much notification do you get before the switchover?</li>
+<li>If you don’t want to go with the new provider, but that is the only supported option, what happens to all your data?  Even if we *assume* an export function is provided you still need to find an alternate ISV that has coded a compatibility layer to access your existing data.  If you can’t, where do you export the data too?  Will we have ‘<em>frozen clouds</em>‘?</li>
+<li>What integrity checks take place to ensure data was properly migrated over?</li>
+<li>When the migration happens, what clean-up happens at the source? (can anyone say forensic wiping?).  What about any backup tapes or off-line copies?  Who is responsible for making sure those are wiped/destroyed?</li>
+</ul>
+<p>Suddenly your cloud storage arrangements have gotten more complex and thus, less secure.  Security issues aside, how does an agile business cope with this?  With multiple providers, data portability becomes a real issue.</p>
+<p>And we haven’t even dug into the API level security issues yet! (yeah, you get to assess that too!).</p>
+<p>As an Information Security community, we have to start figuring out some of these issues before we find our options severely limited…</p>
+<p>What do you think?</p>
+

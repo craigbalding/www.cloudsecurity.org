@@ -1,0 +1,27 @@
+--- 
+title:      Is Your Browser Leaving Your Cloud Assets Vulnerable?
+description: "Web browsers may cache or store sensitive infoatmion, exposing your cloud credentials and data to risk." 
+created_at: 2008-12-17 13:50:07 Z
+author:     Craig Balding
+blog_post:  true
+tags:
+- Cloud Computing Security
+
+--- 
+<p>The expression “a chain is only as secure as its weakest link” seems pretty appropriate with the release of an <a href='http://www.info-svc.com/news/2008/12-12/' target='_blank'>updated test report</a> on Web Browser password security. In a nutshell, your browser may not be protecting your stored/cached passwords the way you might hope. Browser security is already important for people that shop or bank online.  However, when your IT Infrastructure is Cloud based, browser security becomes a critical organisational security factor.  If an attacker can gain your Cloud credentials, how much of your Cloud Compute, Storage and SaaS can they control, influence or destroy. In their first report, Chaplin Information Services highlighted two key required features of browser password managers:</p>
+<blockquote><p>Internet password managers need to know two things to be secure: Which website is requesting a password? And, to which website is a password being delivered?</p></blockquote>
+<p>Check out the scorecard below:</p>
+<p><img title='Is Your Browser Leaving Your Cloud Assets Vulnerable?' src='http://images.craigbalding.com.s3.amazonaws.com/cloudsecurity.org/browser-password-FAIL.jpg' height='330' alt='Test results of browser password managers' width='500'/></p>
+<p>Test definitions are available <a href='http://www.info-svc.com/news/2008/12-12/' target='_blank'>here</a>.</p>
+<p>Clearly, there is still some way to go.</p>
+<p>A few observations:</p>
+<ul>
+<li>The timing of the announcement is interesting.  According to CIS, they notified Google about the issues prior to the release of Chrome.  On December 12th, Google removed the beta label and Chrome is considered production code.  It will be interesting to see if Google comment on this as on the surface this does leave some awkward questions.  Rather than pre-judge now, lets see if/how they respond.</li>
+<li>This issue is compounded with Cloud Computing as the Cloud Management interfaces exposed by the Cloud providers cannot - in most cases - be restricted to specific IP ranges (not a total solution but a significant mitigant).  For example, if an attacker steals your Amazon AWS password, she can directly access the AWS management pages, claim your AccessID and Secret Key and perform a Cloud takeover from any source IP address of her choosing.</li>
+<li>The lack of Cloud visibility means you have no administrative audit trail to (a) pro-actively monitor for misuse of your credentials and (b) perform rapid response.  On that last point, you would need to reach out to your provider and ask them to tell you which source IP accessed your Cloud account (in a future post, I’ll talk about the complete lack of *formal* Incident Response provisions in Cloud SLAs).</li>
+<li>Browser bugs are hardly rare - what makes this batch insidious is the ease with which the weaknesses can be exploited - no special exploit code required.  Expect to see this abused.</li>
+<li>This is a bad week week for browser bugs.  An emergency hotfix from Microsoft to fix an actively exploited heap overflow is released today, along with fixes from Opera rated as highy critical.</li>
+<li>The market for browser security products will continue to grow (duh!).</li>
+</ul>
+<p>The most practical recommendation I can give is to recommend all Cloud related administration is carried out in a separate Virtual Machine.  This is good advice for internal IT administrators today - regardless of whether they use Cloud services or not.  The main thrust is to ensure that your email client and “normal” web browser are isolated from your administration infrastructure.  The need for separation of administration environments becomes increasingly vital as organisations adopt Cloud Services.</p>
+<p>If you are curious, you can <a href='http://www.info-svc.com/news/2008/07-24/pm-evaluator/' target='_blank'>test your browser</a>.</p>

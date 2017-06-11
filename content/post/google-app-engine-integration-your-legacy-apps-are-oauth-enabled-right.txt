@@ -1,0 +1,43 @@
+--- 
+title:      "Google App Engine Integration: Your Legacy Apps are OAuth Enabled, Right?"
+description: "Google App Engine introduces the Google Secure Data Connector to help organisations connect their network to the Google public cloud."
+created_at: 2009-04-08 18:36:12 Z
+author:     Craig Balding
+blog_post:  true
+tags:
+- Platform as a Service
+- Google App Engine
+- OAuth
+
+--- 
+<p>Google <a href='http://googleappengine.blogspot.com/2009/04/seriously-this-time-new-language-on-app.html'>just announced</a> some major new features to App Engine.</p>
+<p>In addition to offering Java (with an Eclipse plugin to follow) and a cron facility for scheduled jobs, they now offer a way to integrate your existing enterprise applications into App Engine.</p>
+<p>From the announcement of <a href='http://code.google.com/securedataconnector/docs/overview.html'>Google Secure Data Connector</a> (SDC) :</p>
+<blockquote><p>SDC provides the following  functionality:</p>
+<ol>
+<li><strong>Secure link</strong>.Encrypts connectivity between Google Apps and your network. Google Apps is the only external service that can make requests over this connection.</li>
+<li><strong>Filters.</strong>Limits the scope of the types of requests that can be routed over SDC.  You can configure filters to limit which gadgets, spreadsheets, and App Engine applications may access which internal systems. Filters may also be used to control which users can access and share data  from your internal systems within Google Apps. You can use the user level filter control to augment the security provided by your internal system for verifying users and originating applications.  Filters should <em>not</em> be used as a standalone authentication system.</li>
+<li><strong>OAuth Signed Fetch.</strong>Protects requests that are made through SDC. You can use Signed Fetch to authenticate requests  from Google if your applications are OAuth aware. Note that SDC provides <em>connectivity</em> between Google Apps and your internal systems.  If you do not use OAuth Signed Fetch, then SDC does not provide authentication.</li>
+</ol>
+</blockquote>
+<p>In case pictures help, this is how it looks:</p>
+<p><img class='center' title='Google Secure Data Connector' src='/files/Secure_Data_Connector_Developer_s_Guide__Overview_-_Google_Secure_Data_Connector_-_Google_Code-20090408-202550.jpg' height='427' alt='Secure_Data_Connector_Developer_s_Guide__Overview_-_Google_Secure_Data_Connector_-_Google_Code-20090408-202550 Google App Engine Integration: Your Legacy Apps are OAuth Enabled, Right?' width='357'/><br/>
+And these are steps:</p>
+<ol>
+<li>Google Apps forwards authorized data requests from users who are within the Google Apps domain to the Google <a href='http://en.wikipedia.org/wiki/Tunneling_protocol'>tunnel protocol</a> servers.</li>
+<li>The tunnel servers validate that a user is authorized to make the request to the specified resource. Google tunnel servers are connected by an encrypted tunnel to SDC, which runs within a company’s internal network.</li>
+<li>The tunnel protocol allows SDC to connect to a Google tunnel server, authenticate, and encrypt the data that flows across the Internet.</li>
+<li>SDC uses resource rules to validate if a user is authorized to make a request to a specified resource.</li>
+<li>An optional intranet firewall can be used to provide extra network security.</li>
+<li>SDC performs a network request to the specified resource or services.</li>
+<li>The service verifies the signed requests and if the user is authorized, returns the data.</li>
+</ol>
+<p>This will enable a whole host of data mashups using an enterprise friendly language (Java).</p>
+<p>What I found most interesting (beyond the network security issues of Google having a large tentacle into your network), is the API trust model relies on <a href='http://oauth.net/'>OAuth</a>.  All the cool kids do OAuth these days, <a href='http://apiwiki.twitter.com/OAuth-FAQ'>even Twitter recently joined the OAuth party.<br/>
+</a><br/>
+Google are offering OAuth as the only mechanism to authenticate Google to your enterprise applications.</p>
+<p>Which begs the question: how many of your legacy apps are OAuth enabled?  You don’t know?  Let me help you out here: None.</p>
+<p>This is a case of Web 2.0 meeting Enterprise -1989.</p>
+<p>How many of your legacy apps could even be OAuth enabled?  OK, take away the word legacy (there is an implicit insult when vendors call all your apps legacy), how many of your newfangled apps could support OAuth?  This question is worth asking as without OAuth support, there is no way to authenticate Google to your applications.   Hmmm, IP level controls OK?</p>
+<p>If Google can drive OAuth into the enterprise then frankly, they would have done us a favour.  But how many organisations are going to be willing to re-engineer apps?  Of those that are, how many are just going to say ‘its OK, its no different from our partners accessing our database (hello?)…open the firewall’.</p>
+<p>It will be really interesting to observe how enterprise application architects react with CloudVision(tm) react to this.  It will be even more interesting to measure the enterprise uptake of OAuth (I’m not holding my breath).</p>

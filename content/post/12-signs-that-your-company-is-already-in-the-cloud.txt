@@ -1,0 +1,32 @@
+--- 
+title:      12 Signs that Your Company is Already in the Cloud
+description: "A light-hearted look at the early tell-tale signs that your company is already using cloud services - regardless of what your security policy does or doesn't say."
+created_at: 2008-04-25 19:14:19 Z
+author:     Craig Balding
+blog_post:  true
+tags:
+- Cloud Computing Security
+
+--- 
+<p><a href='http://www.flickr.com/photos/74471232@N00/506202234/' title='building_gap' target='_blank'><img title='12 Signs that Your Company is Already in the Cloud' src='http://farm1.static.flickr.com/227/506202234_636bc16be9_m.jpg' border='0' alt='building_gap'/></a></p>
+<p>What are the telltale signs that your company is already Computing in the Cloud?</p>
+<p>Is it when the CIO makes a big announcement at the monthly IT meeting?</p>
+<p>Is it when the IT newsletter drops a reference to pilot testing of some ‘web based’ software?</p>
+<p>Or, is it when the secretary whips out the boss’s Corporate Credit Card and <a href='http://www.mindtouch.com/blog/2008/04/07/'>signs up</a> to a Cloud Service?</p>
+<p>Here are 12 indicators that your company is *already* part of the Cloud:</p>
+<ol>
+<li>Your internal helpdesk reports fewer password resets.</li>
+<li>Finance contacts you to confirm all the DVD readers are disabled - they are puzzled by the number of recurring credit card charges for Amazon (are the secretaries spreading out their orders for “Lost” DVDs again?).</li>
+<li>You are asked to authorise a network change ticket that modifies the LAN routing policy.  All traffic will be sent directly to the Internet proxy (for performance reasons).  From the accompanying diagram, the data center appears to have been cut and pasted on the wrong side of the firewall (idiots!).</li>
+<li>You walk into the Data Center and it feels cooler than usual.</li>
+<li>When the builders next door accidentally saw through the company Internet connection, people complain there must be a DoS attack going on as they can’t get to their files.</li>
+<li>During physical inspections, you notice unexplained gaps in server cabinets.</li>
+<li>Login failures go down, in fact login “attempts” in general go down but the company car park is full.</li>
+<li>As you walk through the office, you notice all the “Security Awareness” posters have been replaced with pictures of <a href='http://images.businessweek.com/mz/04/51/0451_18innova.jpg'>Jeff Bezos</a> (!)</li>
+<li>You are asked to authorise a visit from the local environment group.  Fearing protesters, you are surprised to learn that your company has won a prize for reducing its Carbon Footprint</li>
+<li>Your Intrusion Prevention System is preventing the call center from uploading contracts stored as GIF files.</li>
+<li>You detect the presence of ‘malware’ in the form of unexplained ‘Machine Images’ on IT’s desktops.</li>
+<li>You stop finding Windows passwords under keyboards, instead you find random hex digits next to the words ‘Access Key’ and ‘Secret Key’.  You sigh, but at least they are setting difficult to guess passwords now!</li>
+</ol>
+<p>If you are charged with IT security in your company, you may want to start checking your web proxy logs for telltale signs that people are talking to the Cloud…or just talk to finance.</p>
+

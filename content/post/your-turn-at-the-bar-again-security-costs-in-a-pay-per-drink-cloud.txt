@@ -1,0 +1,43 @@
+--- 
+title:      Your Turn At The Bar Again?  Security Costs in a Pay Per Drink Cloud
+description: "Security API calls and audit log entries may be billable for cloud services.  How does your choice of cloud security tools impact your budget?"
+created_at: 2008-05-01 20:55:26 Z
+author:     Craig Balding
+blog_post:  true
+tags:
+- Cloud Computing Security
+
+--- 
+<p><a href='http://www.flickr.com/photos/58746120@N00/226174381/' title='Lounge' target='_blank'><img title='Your Turn At The Bar Again?  Security Costs in a Pay Per Drink Cloud' src='http://farm1.static.flickr.com/77/226174381_1c9bac8eb7_m.jpg' border='0' alt='Lounge'/></a></p>
+<p>With in-house IT, you pay your upfront capital costs and maintenance fees and you get whatever compute power you paid for.  If you over-specify, you have excess computer power or disk - you are wasting money.  If you under-specify, you may be forced to raid your ‘rainy day’ budget and order new hardware.</p>
+<p>A primary selling point of Cloud Computing is the  ‘pay by the drink’ billing model - you only pay for the CPU cycles and storage you use - that’s it.</p>
+<p>If you run any IT security tools at all, Cloud Computing may impact the way you calculate your IT security budgets.</p>
+<h3>Assessing The Cost of Runtime Security</h3>
+<p>Security costs can be overt or hidden:</p>
+<ul>
+<li>budget items spread across infrastructure, security, compliance, midrange.</li>
+<li>the runtime security costs of security tools that execute on the systems.</li>
+</ul>
+<p>How many organisations know their runtime security compute costs?  My guess is not many.  Under the traditional IT billing model, you mostly don’t need to figure this stuff out.  As long as your security tools don’t chew up the CPU unnecessarily or fill the disk, everyone is happy.</p>
+<p>The performance of security products varies greatly.  On the negative side, poor design or implementation are problems only the vendor can address.   Site specific issues arise through all kinds of madness - customers failing to “read the label” and provision properly, insufficiently trained people making poor configuration choices or simply relying on the default settings in a very non-default environment!</p>
+<p>The negative side effects of in-line security tools hit home as system load increases.  Access checks, logging and other ‘in-line’ security operations may perform fine under normal load fail to scale as load increases past a certain threshold.  This can lead to CPU spikes or poor disk access patterns.</p>
+<h3>Switch Off Or Pay Up?</h3>
+<p>To bring this closer to home, lets explore how the impact of security tools plays out today under traditional IT and tomorrow, under Cloud Computing.  Lets eavesdrop on a fictitious conversation between Oscar the ORACLE DBA and Simon the Security Dude.</p>
+<p><strong>Oscar</strong>: Hey Simon, your Security Agents are killing system performance again.  Anna in accounts called up to say they can’t do the Quarterly close, the jobs are getting killed before they finish.</p>
+<p><strong>Simon</strong>: Hi Simon, I understand but we can’t just disable all the security!</p>
+<p><strong>Oscar</strong>: Well, we need to do something if we are going to finish posting our numbers this quarter.  Are you volunteering to explain to our CEO why we didn’t?</p>
+<p><strong>Simon</strong>: Hmm.  Let me check the agent logs, perhaps there is a problem.</p>
+<p><strong>Oscar</strong>: I already checked them, no errors reported.</p>
+<p><strong>Simon</strong>: Hmm.  I’ll log a call with the Premium International Support Service.</p>
+<p><strong>Oscar</strong>: You did that last time and the support guy stuck to the party line that the security agent takes 5-10% of CPU.  We know those numbers are wrong from our benchmarking - sometimes it takes 20% of CPU and always a lot more during quarter close.</p>
+<p><strong>Simon</strong>: Hmm.  Are there any other processes running on the system we can disable for a while?</p>
+<p><strong>Oscar</strong>: Nope - we’re running a tight a ship as we can here.  I’ve already told Steve from sourcing he is going to have to wait for his reports.</p>
+<p><strong>Simon</strong>: Hmm.  Bugger.  OK, I’ll disable the agents - but you must tell me as soon as the quarter close completes so I can start them up again.</p>
+<p><strong>Oscar</strong>:  Thanks - will do.</p>
+<p>A classic conversation under the ‘old regime’. Simon is forced into an operational security decision due to an under-specified system or an over indulgent security agent.  His only option in this scenario is to disable the poorly scaling security tool.  He can’t just scream “Need more power!” and additional CPUs appear.</p>
+<p>Now lets see how this plays out with Cloud Computing, where the change in paradigm will remove the compute limits and make your on the spot risk decisions link directly to your costs and security tool efficiencies:</p>
+<p>Simon the Security Dude receives an auto-generated email from the Cloud Provider:</p>
+<blockquote><p><em>A virtual CPU was auto-inserted on virtual machine image FINANCE1 at 10:30am as Runtime Security Compute usage exceeded the agreed threshold in the SLA.   Please note, you have now reached your soft credit limit - please click the link below to authorize an increase.  You currently have 4USD left in your account.</em></p></blockquote>
+<p>So what does Simon do now? He already tapped into his security compute budget five times this week and he’s running low.  The silver lining is that at least he gets to make the decision now - he isn’t forced to ’switch off security’. If he has the cash, he can attempt to buy his way out of the problem.  The obvious negative is “death by a thousand costs” - he’s running out of budget.</p>
+<p>The root cause of the problem is that prior to moving to the Cloud, Simon didn’t have a handle on how much runtime security was *really* costing. He didn’t know (a) his runtime security costs or (b) how much of that cost was unnecessary - caused by security tool inefficiency.  He wasn’t the one paying, so most of the time he didn’t have to care.  Even if he had found a way to calculate his costs, he’d still have to figure out how performance differences of Cloud Computing would skew his numbers.</p>
+<p>And therein lies the rub: if you don’t know your security runtime costs are today - and where the waste is - how will you cope “tomorrow” when it’s always your turn to pay for drinks at the Cloud Bar?</p>

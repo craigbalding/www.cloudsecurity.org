@@ -1,0 +1,66 @@
+--- 
+title:      Assessing the Security Benefits of Cloud Computing
+descriptions: "A lot is written about the security risks posed by Cloud Compuing.  This post explores the benefits of public cloud services from a security perspective."
+created_at: 2008-07-21 07:00:15 Z
+author:     Craig Balding
+blog_post:  true
+tags:
+- Cloud Computing Security
+- benefits
+- forensics
+- IaaS
+- PaaS
+- SaaS
+- security testing
+- storage
+
+--- 
+<p><a href='http://www.flickr.com/photos/94094843@N00/2292559560/' title='Is the glass half empty or half full?' target='_blank'><img class='alignright' title='Assessing the Security Benefits of Cloud Computing' src='http://farm4.static.flickr.com/3004/2292559560_2a28503b89_m_d.jpg' border='0' alt='Is the glass half empty or half full?' style='border: 0; float: right; margin: 3px;'/></a></p>
+<p>With all this <a href='http://cloudsecurity.org/'>talk</a> and <a href='http://www.gartner.com/DisplayDocument?id=685308'>reporting</a> about security concerns, lets change the channel for a moment and assess the <strong>potential security benefits</strong> of Cloud Computing.</p>
+<p>In my view, there are some strong technical security arguments in favour of Cloud Computing - assuming we can find ways to manage the risks.</p>
+<p>With this new paradigm come challenges <strong>and </strong>opportunities.  The challenges are getting plenty of attention - I’m regularly afforded the opportunity to <a href='http://www.gridtoday.com/grid/2422309.html'>comment</a> on them, plus obviously I cover them on this blog.  However, lets not lose sight of the potential upside.</p>
+<p>In this post, I walk through seven technical security benefits.  Some are immediate, others may arise over time and have conditions attached (some unstated for the sake of brevity).  However, I’m including the longer-range benefits now to raise awareness.  Some of the outcomes listed are available today without the Cloud, but they are either complex and slow to implement (and thus less likely to happen) or prohibitive for capital cost reasons.  I don’t claim this is a definitive list - it reflects where my thinking is today.</p>
+<p>Some benefits depend on the Cloud service used and therefore do not apply across the board.  For example; I see no solid forensic benefits with SaaS.  Also, for space reasons, I’m purposely not including the ‘flip side’ to these benefits, however if you read this blog regularly you should <a href='http://cloudsecurity.org/2008/04/24/cloud-stacks-please-mind-the-gap/'>recognise some</a>.</p>
+<p>On a sidenote, I believe the Cloud offers Small and Medium Businesses major potential security benefits.  Frequently SMBs struggle with limited or non-existent in-house INFOSEC resources and budgets.  The caveat is that the Cloud market is still very new - security offerings are somewhat foggy - making selection tricky.  Clearly, not all Cloud providers will offer the same security.</p>
+<h4>Seven Technical Security Benefits of the Cloud</h4>
+<h4>1. Centralised Data</h4>
+<ul>
+<li><strong>Reduced Data Leakage</strong>: this is the benefit I hear most from Cloud providers - and in my view they are right.  How many laptops do we need to lose before we get this?  How many backup tapes?  The data “landmines” of today could be greatly reduced by the Cloud as thin client technology becomes prevalent.  Small, temporary caches on handheld devices or Netbook computers pose less risk than transporting data buckets in the form of laptops.  Ask the CISO of any large company if all laptops have company ‘mandated’ controls consistently applied; e.g. full disk encryption.  You’ll see the answer by looking at the whites of their eyes.  Despite best efforts around asset management and endpoint security we continue to see embarrassing and disturbing misses.  And what about SMBs?  How many use encryption for sensitive data, or even have a data classification policy in place?</li>
+<li><strong>Monitoring benefits</strong>: central storage is easier to control and monitor.  The flipside is the nightmare scenario of <a href='http://www.gnucitizen.org/blog/most-attractive-targets-saas/'>comprehensive data theft</a>.  However, I would rather spend my time as a security professional figuring out smart ways to protect and monitor access to data stored in one place (with the benefit of situational advantage) than trying to figure out all the places where the company data resides across a myriad of thick clients!  You can get the benefits of Thin Clients today but Cloud Storage provides a way to centralise the data faster and potentially cheaper.  The logistical challenge today is getting Terabytes of data to the Cloud in the first place.</li>
+</ul>
+<h4>2. Incident Response / Forensics</h4>
+<ul>
+<li><strong>Forensic readiness</strong>: with Infrastructure as a Service (IaaS) providers, I can build a dedicated forensic server in the same Cloud as my company and place it offline, ready for use when needed.  I would only need pay for storage until an incident happens and I need to bring it online.  I don’t need to call someone to bring it online or install some kind of remote boot software - I just click a button in the Cloud Providers web interface.  If I have multiple incident responders, I can give them a copy of the VM so we can distribute the forensic workload based on the job at hand or as new sources of evidence arise and need analysis.  To fully realise this benefit, commercial forensic software vendors would need to move away from archaic, physical dongle based licensing schemes to a network licensing model.</li>
+<li><strong>Decrease evidence acquisition time</strong>: if a server in the Cloud gets compromised (i.e. broken into), I can now clone that server at the click of a mouse and make the cloned disks instantly available to my Cloud Forensics server.  I didn’t need to “find” storage or have it “ready, waiting and unused” - its just there.</li>
+<li><strong>Eliminate or reduce service downtime</strong>: Note that in the above scenario I didn’t have to go tell the COO that the system needs to be taken offline for hours whilst I dig around in the RAID Array hoping that my physical acqusition toolkit is compatible (and that the version of RAID firmware isn’t supported by my forensic software).  Abstracting the hardware removes a barrier to even doing forensics in some situations.</li>
+<li><strong>Decrease evidence transfer time</strong>: In the same Cloud, bit fot bit copies are super fast - made faster by that replicated, distributed filesystem my Cloud provider engineered for me.  From a network traffic perspective, it may even be free to make the copy in the same Cloud.  Without the Cloud, <strong>I </strong>would have to a lot of time consuming and expensive provisioning of physical devices.  I only pay for the storage as long as I need the evidence.</li>
+<li><strong>Eliminate forensic image verification time</strong>: Some Cloud Storage implementations expose a cryptographic checksum or hash.  For example, Amazon S3 generates an MD5 hash <a href='http://docs.amazonwebservices.com/AmazonS3/2006-03-01/index.html?RESTObjectPUT.html'>automagically</a> when you store an object.  In theory you no longer need to generate time-consuming MD5 checksums using external tools - its already there.</li>
+<li><strong>Decrease time to access protected documents</strong>: Immense CPU power opens some doors.  Did the suspect password protect a document that is relevant to the investigation?  You can now test a wider range of candidate passwords in less time to speed investigations.</li>
+</ul>
+<h4>3. Password assurance testing (aka cracking)</h4>
+<ul>
+<li><strong>Decrease password cracking time</strong>: if your organisation regularly tests password strength by running password crackers you can use Cloud Compute to decrease crack time and you only pay for what you use.  Ironically, your cracking costs go up as people choose better passwords ;-).</li>
+<li><strong>Keep cracking activities to dedicated machines</strong>: if today you use a distributed password cracker to spread the load across non-production machines, you can now put those agents in dedicated Compute instances - and thus stop mixing sensitive credentials with other workloads.</li>
+</ul>
+<h4>4. Logging</h4>
+<ul>
+<li><strong>“Unlimited”, pay per drink storage</strong>: logging is often an afterthought, consequently insufficient disk space is allocated and logging is either non-existant or minimal.  Cloud Storage changes all this - no more ‘guessing’ how much storage you need for standard logs.</li>
+<li><strong>Improve log indexing and search</strong>: with your logs in the Cloud you can leverage Cloud Compute to index those logs in real-time and get the benefit of <a href='http://blogs.splunk.com/thewilde/2008/06/24/splunk-ninja-inside-the-cloud/'>instant search results.</a> What is different here?  The Compute instances can be plumbed in and scale as needed based on the logging load - meaning a true real-time view.</li>
+<li><strong>Getting compliant with Extended logging</strong>: most modern operating systems offer extended logging in the form of a C2 audit trail.  This is rarely enabled for fear of performance degradation and log size.  Now you can ‘opt-in’ easily - if you are willing to pay for the enhanced logging, you can do so.  Granular logging makes compliance and investigations easier.</li>
+</ul>
+<h4>5. Improve the state of security software (performance)</h4>
+<ul>
+<li><strong>Drive vendors to create more efficient security software</strong>: Billable CPU cycles get noticed.  More attention will be paid to inefficient processes; e.g. poorly tuned security agents.  Process accounting will make a comeback as customers target ‘expensive’ processes.  Security vendors that understand how to squeeze the most performance from their software will win.</li>
+</ul>
+<h4>6. Secure builds</h4>
+<ul>
+<li><strong>Pre-hardened, change control builds</strong>: this is primarily a benefit of virtualization based Cloud Computing.  Now you get a chance to start ’secure’ (by your own definition) - you create your Gold Image VM and clone away.  There are ways to do this today with bare-metal OS installs but frequently these require additional 3rd party tools, are time consuming to clone or add yet another agent to each endpoint.</li>
+<li><strong>Reduce exposure through patching offline</strong>: Gold images can be kept up securely kept up to date.  Offline VMs can be conveniently patched “off” the network.</li>
+<li><strong>Easier to test impact of security changes</strong>: this is a big one.  Spin up a copy of your production environment, implement a security change and test the impact at low cost, with minimal startup time.  This is a big deal and removes a major barrier to ‘doing’ security in production environments.</li>
+</ul>
+<h4>7. Security Testing</h4>
+<ul>
+<li><strong>Reduce cost of testing security: </strong>a SaaS provider only passes on a portion of their security testing costs.  By sharing the same application as a service, you don’t foot the expensive security code review and/or penetration test.  Even with Platform as a Service (PaaS) where your developers get to write code, there are potential cost economies of scale (particularly around use of code scanning tools that sweep source code for security weaknesses).</li>
+</ul>
+<h4>Your Thoughts?</h4>
+<p>What benefits do you see that I haven’t included in the above list?  Where do you agree/disagree and importantly, why?</p>

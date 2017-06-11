@@ -1,0 +1,31 @@
+--- 
+title:      Cloud Computing Defined #1
+created_at: 2008-04-17 21:38:20 Z
+description: What is Cloud Computing?  A simple definition covering virtualization, commodity hardware and software and utility billing.
+author:     Craig Balding
+blog_post:  true
+filter:
+- textile
+tags:
+- Cloud Computing Security
+- definitions
+
+--- 
+p=. !/files/2008/04/cloud-computing-101.png:"Cloud Computing 101"
+
+From the "ESM blog":http://www.johnmwillis.com/cloud-computing/cloud-computing-and-the-enterprise/:
+
+bq. IMO, A the holy grail cloud has only two primary characteristics and five secondary add-ons.
+
+bq. Primary
+1) It uses commodity based hardware as it’s base. Hardware can be replaced at anytime and have no effect on the cloud.
+2) It uses commodity based software containers. For example an image should be able to be pulled from one cloud provider to any other cloud provider.
+
+bq. Some secondary characteristics are:
+1) Virtualization
+2) Abstraction layer for the hardware, software, and configuration of systems.
+3) Pay as you go with no lock-in
+4) Dynamic horizontal and vertical scaling
+5) Flexible migration and restart capabilities
+
+What’s your definition of Cloud Computing?

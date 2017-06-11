@@ -1,0 +1,22 @@
+--- 
+title:      US Government Creates Cloud Computing Security Group
+created_at: 2009-03-04 13:46:31 Z
+description: "NIST creates a Cloud Computing Security Group to identify risks and develop standards for government agencies to safely use cloud services."
+author:     Craig Balding
+blog_post:  true
+filter:
+- textile
+tags:
+- Cloud Computing Security
+- NIST
+- standards
+
+--- 
+<p><a href='http://fcw.com/articles/2009/02/25/nist-cloud-computing.aspx'>Federal Computing Weekly</a> recently reported that the <a href='http://www.nist.gov/'>National Institute of Standards and Technology</a> (NIST), an agency of the Commerce Department’s Technology Administration, has announced plans to create a Cloud Computing Security group.</p>
+<blockquote><p><strong>The National Institute of Standards and Technology has </strong><strong>created a new team to determine the best way to provide security for agencies that want to adopt the emerging technology called cloud computing</strong>, said Ron Ross, a senior computer scientist and information security researcher at NIST.</p>
+<p>“<strong>The team will give our customers a sense of what kinds of risks they may be taking on </strong>by moving into that new territory,” Ross said today at the <a href='http://siia.net/saasgov/2009/schedule.asp'>SaaS/Gov 2009 conference</a> produced by the Software and Information Industry Association and market research firm Input.</p></blockquote>
+<p><strong>Googling reveals an earlier presentation</strong> titled ‘<a href='http://csrc.nist.gov/groups/SMA/ispab/documents/minutes/2008-12/cloud-computing-standards_ISPAB-Dec2008_P-Mell.pdf'>Perspectives on Cloud Computing and Standards</a>‘ by Peter Mell and Tim Grance<span> from the Information Technology Laboratory at NIST, wherein they announce plans to develop a NIST Special Publication on Cloud Computing Security to cover the following:</span></p>
+p=. !/files/2009/03/upcoming-draft-nist-cloud-computing-security.png(NIST creating Cloud Computing Security Standard)!
+<p><strong>I recommend reading the rest of the <a href='http://csrc.nist.gov/groups/SMA/ispab/documents/minutes/2008-12/cloud-computing-standards_ISPAB-Dec2008_P-Mell.pdf'>presentation</a></strong>, particularly around the NIST definition of Cloud (”what you can’t define, you can’t standardize”) and some of the implementation options under consideration.  You can catch the authors giving this presentation in person at the <a href='http://groups.google.com/group/cloudforum/web/draft-agenda-for-dc-cloud-computing-interoperability-workshop----march-23'>Cloud Computing Interoperability Workshop</a> on March <span style='text-decoration: line-through;'>32rd</span> 23rd in Virginia, US.</p>
+<p>It will be interesting to see what this group proposes/mandates.</p>
+<p>On a sidenote, this post is the perfect opportunity to <strong>draw your attention</strong> to fellow Cloud blogger <strong>Kevin Jackson</strong>.  Kevin focuses on Public Sector Cloud news and developments making <a href='http://kevinljackson.blogspot.com/'><strong>his blog a must-read</strong></a>.</p>

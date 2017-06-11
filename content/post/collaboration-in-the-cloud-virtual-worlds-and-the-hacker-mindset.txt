@@ -1,0 +1,32 @@
+--- 
+title:      Collaboration in the Cloud, Virtual Worlds and the Hacker Mindset
+description: When collaboration technologies meet Virtual Worlds, what are the security implications?"
+created_at: 2008-07-17 15:51:24 Z
+author:     Craig Balding
+blog_post:  true
+tags:
+- Cloud Computing Security
+
+--- 
+<h4><img title='Collaboration in the Cloud, Virtual Worlds and the Hacker Mindset' src='http://blogs.cisco.com/images/uploads/johnchamberspost.jpg' height='246' alt='johnchamberspost Collaboration in the Cloud, Virtual Worlds and the Hacker Mindset' width='450'/></h4>
+<h4>Collaboration in the Cloud</h4>
+<p>Forward thinking companies use collaboration technologies to melt away the physical distance between disparate offices, remote workers and suppliers.  Investments in R&amp;D projects to create the next generation of business collaboration technologies and starting to bear early fruits and are worth paying attention to - especially if you get paid to “do security”.  One major focus area is Virtual Worlds.</p>
+<h4>Teleporting Virgins</h4>
+<p>The <a href='http://blog.secondlife.com/2008/07/08/ibm-linden-lab-interoperability-announcement/'>big news</a> in the <a href='http://www.secondlife.com/'>Second Life</a> research community is that avatars (”virtual people”) have successfully teleported between <em><strong>distinct </strong></em>virtual worlds.  The virgin teleporters went from a Second Life Preview Grid - an experimental grid completely disconnected from the Main Grid - to a virtual world running IBM OpenSIM.</p>
+<p>At this stage there is intentionally no asset transfer going on at all - in other words, you can’t take your “stuff” from one world to another - but that will come in time as the <a href='http://secondlifegrid.net.s3.amazonaws.com/docs/specs/SLGOGP-draft-1.html'>Open Grid Protocol</a> is extended.  Today just login and teleport are supported.  No stealing those trade secret “assets” yet ;-).</p>
+<p>Linden Labs speaks to this issue:</p>
+<blockquote><p>Q: How will Linden Lab prevent property from being copied into other virtual worlds?<br/>
+We’re paying extremely close attention to that question. We will be designing this with the Second Life community to ensure their needs are met. We want to stress that when it does become possible to move avatars between worlds, we will take the utmost care to protect the rights of Second Life property owners and creators. Linden Lab will not design a system that lets people openly violate the permissions of SL goods and take them to other worlds. We recognize that intellectual property is the engine that drives Second Life, and we are completely committed to preserving the qualities that make Second Life the unique, innovative and dynamic place that it is today.</p></blockquote>
+<p>With my “hacker-vision” ™ enabled I see *all kinds* of opportunities for mischief here.  I’m betting we’ll see imaginative attacks as the usual cat and mouse game of vulnerability research and vendor response plays out.  “Sorry boss, someone hijacked my avatar and now I’m stuck on this desert island for who knows how long!”.</p>
+<h4>Threat Profiling Second Life</h4>
+<p>Getting back to reality, people are already exploring Virtual World security.  <a href='http://www.ernw.de/'>Michael Thumann of ERNW</a> in Germany is a pen-tester and security researcher and in this 10 minute video, Michael shares the result of his security research on Second Life.</p>
+<p>He covers:</p>
+<ul>
+<li> In-game cheating</li>
+<li> Identity theft</li>
+<li> Attacking 3rd party servers using Linden Scripting Language (think about the liability issues and the providers ability to track abusers)</li>
+</ul>
+<p>&lt;object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="425" height="344" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"&gt;&lt;param name="allowFullScreen" value="true"/&gt;&lt;param name="src" value="http://www.youtube.com/v/6MoptnBsNGc&amp;amp;hl=en&amp;amp;fs=1"/&gt;&lt;embed type="application/x-shockwave-flash" width="425" height="344" src="http://www.youtube.com/v/6MoptnBsNGc&amp;amp;hl=en&amp;amp;fs=1" allowfullscreen="true"&gt;&lt;/embed&gt;&lt;/object&gt;</p>
+<p>For those interested in more detail, the full presentation he gave at BlackHat Europe 2008 in Amsterdam is <a href='https://www.blackhat.com/presentations/bh-europe-08/Thumann/Whitepaper/bh-eu-08-thumann-WP.pdf'>here </a>(pdf).</p>
+<p>Of particular note, Michael applied a formal threat model approach to the research - <a href='http://msdn.microsoft.com/en-us/library/ms954176.aspx'>STRIDE </a>from Microsoft.</p>
+<p>In a future post I’ll talk more about threat profiling in the context of Cloud Computing vulnerability research and specific API security vulnerability classes we can expect to see exploited.</p>

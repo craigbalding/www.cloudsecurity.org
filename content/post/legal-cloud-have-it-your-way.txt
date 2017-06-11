@@ -1,0 +1,52 @@
+--- 
+title:      "Legal Cloud: Have It Your Way"
+description: "Legal Cloud caters to the specific security, compliance and audit needs of Law firms.  Will vertical specific clouds drive greater cloud adoption by enterprises?"
+created_at: 2009-05-08 07:52:59 Z
+author:     Craig Balding
+blog_post:  true
+tags:
+- Infrastucture as a Service
+
+--- 
+<p><img class='left' title='Logo of the Legal Cloud' src='http://www.legalcloud.net//i/shared/logo.gif' height='52' alt='logo Legal Cloud: Have It Your Way' width='281'/>Today, <a href='http://www.nscaled.com/'>nScaled</a> <a href='http://www.theopenpress.com/index.php?a=press&id=49807'>announces</a> the <a href='http://www.legalcloud.net/'>Legal Cloud</a> in Beta.  This is a vertical specific cloud targeting the “infrastructure on demand” (IaaS) requirements for international law firms:</p>
+<blockquote><p>Legal Cloud today announced that several top, international law firms had signed up as early testers of its virtual data center services for the legal market. The Legal Cloud is operating a ‘closed beta’ with select law firms interested in reducing the costs of their existing collocation facilities, finding a way to implement a business continuity program without duplicating private infrastructure or simply planning for their future primary and secondary infrastructure facilities.</p></blockquote>
+<h3>What Makes This Different?</h3>
+<p>From their blurb:</p>
+<blockquote><p>The founders of the Legal Cloud have been working in the legal technology industry for over a decade. We understand that the needs of international law firms are different to other industries. Our data centers are optimized to meet the needs of law firms. Our choice of technologies, performance, data storage, latency, service level agreements, security and features have all been specifically devised to support the needs of the legal industry (<a href='http://www.legalcloud.net/solutions.php'>source</a>).</p></blockquote>
+<h3>Why This Is Important From a Cloud Security Perspective?</h3>
+<ul>
+<li>This cloud is designed around the needs of a specific industry:  with a well defined set of clients in mind it can cater to the groups specific operational and security needs</li>
+<li>These are not just “any customers”: international law firms that will have legal, compliance and security requirements over and above your “average” cloud customer today.  This needs to be a cloud with ‘higher assurance’ features to gain the trust and buy-in of legal CIOs</li>
+<li>The security conversation suddenly becomes a lot more focused: we are not talking about a general “one size fits all” cloud anymore and facing the disharmony of varying customers security needs and provider capabilities.  This may sound trivial but security conversations can get painful fast when customer and provider come from different worlds.</li>
+<li>In a view I’ve held for a longtime, its a taste of things to come: banking clouds, healthcare clouds, federal clouds (happening now).  Yes, there are other industry specific clouds (e.g. Salesforce Service Cloud) and they have their own security requirements, but arguably less assurance will be demanded by customers.</li>
+<li>The customers become an important lobby group for future security feature requests: instead of X voices asking for completely different things, the community of Legal Cloud users will state requirements “loud and clear” and if nScaled doesn’t listen, provide an opportunity for “Another Legal Cloud” to steal customers.</li>
+<li>The success of this cloud will be judged by many: if nScaled delivers on their promise, they will benefit from first mover advantage and become the “standard” for legal cloud.  From my UK experience, the legal community is cautious about new technologies and is a pretty tight-nit group, so if sufficient “established” legal firms move its not hard to imagine many more following (well, I’m sure that’s what nScaled hopes ;-).</li>
+</ul>
+<h3>What Is On Offer?</h3>
+<p>Legal Cloud is offering the following on a services basis:</p>
+<blockquote>
+<ul class='hoverShow'>
+<li>Fully virtualized data centers</li>
+<li>Business Continuity Service</li>
+<li>Active Cloud Servers</li>
+<li>Unlimited Storage</li>
+<li>Snapshot recovery points</li>
+</ul>
+</blockquote>
+<p>And here’s how it looks from a 50,000ft:</p>
+<p><img class='aligncenter' title='Legal Cloud' src='/files/nScaled___Cloud_Computing_Experts___Services-20090508-093056.jpg' height='479' alt='nScaled___Cloud_Computing_Experts___Services-20090508-093056 Legal Cloud: Have It Your Way' width='519'/></p>
+<h3>What Do They Say About Security?</h3>
+<p>After a brave headline of “Security Guaranteed” (sure to rile anyone in information security), they go on to <a href='http://www.legalcloud.net/solutions.php'>state</a>:</p>
+<blockquote><p>The security of your data is of paramount importance. Here is how we guarantee it’s security.</p>
+<p><strong>Secure Data Centers</strong></p>
+<p>Our data centers are highly secure and redundant precision environments backed by the Fanatical Support of Rackspace. (SAS-70 Compliant)</p>
+<p><strong>Secure Virtual Private Networks</strong></p>
+<p>We extend your network into the Legal Cloud using VPN (Virtual Private Network) and VLAN (Virtual LAN) technologies. Your data is encrypted during transit with IPsec. Within the Legal Cloud, your data is segregated in logically separate areas from other clients data and attached only to your private networking. This gives each client their own private network and storage in the Cloud.</p>
+<p><strong>Data Encryption</strong></p>
+<p>Client Data is encrypted from client source servers to target devices using strong encryption protocols.</p>
+<p><strong>Not on the public Internet</strong></p>
+<p>The legal Cloud is not exposed to the public Internet. It is actually an extention of each clients internal network, each seperated by strong security protocols.</p>
+<p><strong>Service Level Agreements</strong></p>
+<p>We are working on appropriate SLA’s for our legal customers during the beta period.</p></blockquote>
+<p>Psychologically, I suspect the most significant reassurance for many CISOs will be this one single sentence: “Not on the public Internet”.  Beyond that, use of IPsec will make this feel very much like a standard 3rd party ‘partner’ connection.  I don’t see any mention of storage encryption options as yet, nor any further detail on the logical separation - once I’ve had a briefing and can speak more to the security aspects, I’ll post more.</p>
+<p>P.S nScaled have annouced a couple of <a href='http://www.legalcloud.net/buzz.php'>webinars</a> aimed at their target audience here.</p>

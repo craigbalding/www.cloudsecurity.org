@@ -1,0 +1,31 @@
+--- 
+title:      "Cloud Stacks: Please Mind The Gap"
+created_at: 2008-04-24 20:54:37 Z
+description: "What measures do you have in place to assess potential security gaps in cloud services and how do you mitigate the risks?"
+author:     Craig Balding
+blog_post:  true
+filter:
+- textile
+tags:
+- Cloud Computing Security
+
+--- 
+<p><a href='http://www.flickr.com/photos/30571787@N00/307814064/' title='MIND THE GAP' target='_blank'><img title='Cloud Stacks: Please Mind The Gap' src='http://farm1.static.flickr.com/102/307814064_6fd3fa48e4_m.jpg' border='0' alt='MIND THE GAP'/></a></p>
+
+Security gaps creep in when people think "other people are taking care of it".
+
+<p>When a security practitioner assesses a complex system, they’ll look at the ‘hand offs’ between different players within the system.  In fact, if they’ve been in the game for a while, they’ll apply laser sharp focus to where the responsibilities of one party ends and another party begins.  In other words, they’ll be searching for the security gaps, the security ‘no-mans land’.   This is a dark place where - as a <a href='http://mokumvonamsterdam.blogspot.com/'>good friend</a> of mine puts it - “the bad stuff” gets in and the “good stuff” doesn’t flow.</p>
+<p>If you’ve ever performed a security review of an outsourced IT system, you’ll know exactly what I mean.</p>
+<p>In the context of Cloud Computing then, who takes responsibility for what?</p>
+<p>As a customer of the Cloud, you or your company may strike an agreement with a company perched atop the Cloud.  They provide you with Software as a Service (SaaS) or some other form of high level, end-user service.  Your service agreement and/or contract will define what you can expect from them and what they expect from you.</p>
+<p>However, to deliver the service to you, they rely on other Cloud providers further down the stack.  In fact, at any level in the Cloud Stack, it could be multiple players providing the service *they* rely on; e.g. Cloud Storage, Cloud Compute, Cloud Security (?). </p>
+<p>These providers in turn depend upon other service providers at the next layer down in the Cloud and so on.</p>
+<p>See where I’m going with this?</p>
+<p>This is a new game I’m going to call “<strong>Join the Security Dots in Cloud Land</strong>“.</p>
+<p>And even then it isn’t as simple as I’ve presented it.</p>
+<p>To end this post I’m going to ask a question to readers of this blog <em>that provide a service</em> on top of the Cloud (I have logs, I know you’re out there ;-):</p>
+<p>What *security* arrangements do you have in place with Cloud Service Providers you rely on to deliver your service?  What are you doing to build “trust in depth” in the Cloud?</p>
+<p>To clarify, I’m not asking you to spill your secret sauce on the Cloud Security alter - rather I want to hear what you are doing for your customers to build assurance (and I don’t mean ‘fluffy’ clouds ;-).</p>
+<p>Personally, I think this will be one of the keys to selling Cloud Services to Enterprise customers.</p>
+<p>Please reply in the comments below or <a href='mailto:craig.balding@gmail.com'>email me</a>.</p>
+

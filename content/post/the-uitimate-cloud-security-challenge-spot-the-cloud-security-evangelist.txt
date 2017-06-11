@@ -1,0 +1,21 @@
+--- 
+title:      "The UItimate Cloud Security Challenge: Spot the Cloud Security Evangelist!"
+description: "Large cloud providers employ evangelists to market their cloud services.  But where are the security evangelists?"
+created_at: 2009-03-06 18:38:25 Z
+author:     Craig Balding
+blog_post:  true
+tags:
+- Cloud Computing Security
+- evangelism
+
+--- 
+<div>
+<p><em>Information </em><em>Security</em> magazine just ran a decent piece on Cloud Computing Security called <a href='http://searchsecurity.techtarget.com/magazineFeature/0%2C296894%2Csid14_gci1349670%2C00.html'>‘How To Secure Cloud Computing’</a>.</p>
+<p>I was asked for my opinion on the security challenges facing enterprises today and what they can start doing about it.</p>
+<p>One of the concerns I expressed is <strong>the lack of security evangelism</strong> <strong>around Cloud Computing Security by Cloud Providers</strong>.  Attend a Cloud Conference and you’ll see what I mean.  The Cloud Provider Evangelists do a great job turning up at conference after conference explaining the benefits and use cases of their respective Clouds.  But when it comes to a meaningful discussion about security, who can you talk to?  The stock answer is ‘we’ll hook you up with our security team’ or ‘we have a whitepaper about this’ or even ‘we use SSL so its OK’.  Um, what?</p>
+<p><strong>Cloud Evangelists quickly get out of their depth when it comes to security.</strong> Now, is that bad?  No, I don’t think so.  If I ran a Cloud company, I’d want my evangelists drumming up business, helping build my brand by being highly visible and keeping an eye on my competitors.  But if the sales process is about one thing more than anything else, its about removing barriers to “yes”.  And <strong>if survey after survey is telling you that the biggest barrier to Cloud adoption is security, why can’t you find a Cloud Security Evangelist when you need one?</strong></p>
+<p>Have the Cloud Security geeks been told they can’t go outside and play with the other geeks?</p>
+<p>To me, as someone actively seeking information on this subject<strong>, I’m stunned by the lack of attention Cloud companies are paying to their marketing efforts around security</strong>.  I’m no Seth Godin or Guy Kawasaki, so if the lack of a security marketing strategy is so blindingly obvious to me, rest assured dear reader, it must be pretty bad.</p>
+<p>And just to be really clear: I’m not suggesting that Cloud providers don’t have smart security people.  Its just that their masters don’t seem to realise that <strong>invisible security may be the holy grail of usability, but it isn’t when it comes to moving the security conversation forward.</strong></p>
+<p>The irony here is that it seems to be the smaller players that actually have people on hand that can directly speak to security.</p>
+<p>Can anyone explain this conundrum?  And more importantly, have you ever met a Cloud Security Evangelist?  Perhaps I should start a ’sightings’ page ;-).</p></div>

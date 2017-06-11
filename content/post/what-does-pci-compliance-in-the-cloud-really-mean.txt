@@ -1,0 +1,50 @@
+--- 
+title:      What Does PCI Compliance in the Cloud Really Mean?
+description: "What is a PCI compliant cloud service?  Learn how to separate the hype from reality in cloud providers compliance claims."
+created_at: 2009-03-14 21:19:40 Z
+author:     Craig Balding
+blog_post:  true
+fave:       1
+filter:
+- textile
+tags:
+- Platform as a Service
+- PCI
+
+--- 
+<p style='text-align: left;'>Mosso/Rackspace recently announced they have “PCI enabled” a <em>Cloud Sites</em> customer that needed to accept online credit card payments in return for goods (i.e. a merchant).</p>
+<p style='text-align: left;'>However, <strong>the website hosted on Mosso’s Cloud, doesn’t actually receive, store, process, transmit any data that falls under the requirements of PCI.</strong></p>
+<p style='text-align: left;'>Or to put it another way, its ‘compliance’ through not actually needing to be…</p>
+<p style='text-align: left;'>This didn’t deter them from putting a “<a href='http://www.mosso.com/docs/PCI_HowTo.pdf'>PCI How To</a>” document together which starts as follows (emphasis mine):</p>
+<blockquote>
+<p style='text-align: left;'><strong>Building a PCI Compliant e-Commerce Solution Using Cloud Sites </strong></p>
+<p>Cloud Sites is designed to provide an elastic web hosting environment.  This capability can allow an e-commerce merchant to properly handle the high volume shopping season without carrying extra infrastructure throughout the remainder of the year.  <strong>Cloud Sites is not currently designed for the storage or archival of credit card information.  In order to build a PCI compliant e-commerce solution, Cloud Sites needs to be paired up with a payment gateway partner.</strong></p></blockquote>
+<p style='text-align: left;'>They then include the following helpful graphic which I modified to emphasis where the PCI data is NOT received, stored, processed or transmitted.  Everything to the left of the red line is the Mosso Cloud and everything to the right is the Payment Gateway provider.  The middle bit marked ‘API’ is that of the Payment Gateway as called by the merchant.</p>
+p=. !/files/http__www.mosso.com_docs_PCI_HowTo.pdf-20090314-194455.jpg('No PCI data at Mosso')!
+<p style='text-align: left;'>As they go on to state:</p>
+<blockquote>
+<p style='text-align: left;'>The communication from the Card Processing System to the Web Front End can never contain cardholder data.  Cardholder data includes: primary account number, expiration date, name as it appears on the card, CVV, CVV2 and magnetic stripe.</p>
+</blockquote>
+<p style='text-align: left;'>Yes Cloud Ladies and Gentlemen, this is an implementation of an age-old Internet architecture that involves redirecting customers wishing to pay for the contents of their online basket to an approved and compliant online payment gateway.</p>
+<p style='text-align: left;'><strong>This approach <a href='http://www.rackspace.com/blog/?p=68'>follows the advice</a> that RackSpace gives with regard to their dedicated hosting business (non-Cloud):</strong></p>
+<blockquote>
+<p style='text-align: left;'>If you deal with credit cards and are required to meet the PCI DSS, <strong>my advice is to find a way to limit the scope of your compliance as much as possible</strong>. Rackspace recently concluded a two-year effort to receive our PCI Service Provider Report on Compliance (ROC) as a Compliant Level 1 Service Provider from Visa USA.</p>
+</blockquote>
+<p style='text-align: left;'>Just to be really clear, the PCI certification referred to above is of their dedicated hosting business - not their Cloud (aka Mosso business).  Different technologies and different architectures.</p>
+<p style='text-align: left;'><strong>So, is there any PCI angle to this in reality?</strong></p>
+<p style='text-align: left;'>The document talks to the PCI requirement as follows (emphasis mine):</p>
+<blockquote>
+<p style='text-align: left;'>By designing your e-commerce site in this manner, <strong>PCI compliance is reduced to a Type A SAQ (Self Assessment Questionnaire)</strong> for merchants processing less than 6,000,000 annual transactions.  The current version of the Type A SAQ can be obtained at: <a href='https://www.pcisecuritystandards.org/saq/instructions_dss.shtml'>https://www.pcisecuritystandards.org/saq/instructions_dss.shtml</a>. To achieve compliance when all cardholder information is handled by a partner, <strong>you only need to address two of the twelve sections of the complete PCI-DSS</strong> (Payment Card Industry – Data Security Standard) <strong>and only a subset of the controls in each of those sections</strong>.  <strong>The two sections are (9) Restrict physical access to cardholder data and (12) Maintain a policy that addresses information security. </strong></p>
+<p><strong>The section 9 requirements are designed to protect any cardholder information stored <em>at your office locations</em>.</strong> If possible configure the relationship with your payment partner so that it is impossible for you or your employees to obtain complete cardholder information.  When logging into the partner portal you should see at most the last 4 digits of a card number.</p>
+<p><strong>The section 12 requirements are designed to ensure you’re working with PCI compliant partners to handle the cardholder information for you and that you have a process in place to ensure those partners remain compliant</strong>.  VISA publishes a list of compliant service providers on a monthly basis at: <a href='http://usa.visa.com/merchants/risk_management/cisp_service_providers.html'>http://usa.visa.com/merchants/risk_management/cisp_service_providers.html</a></p></blockquote>
+<p>If you’ve followed along this far, you’ll realise that Mosso Cloud Sites is still ‘out of scope’ from PCI requirements as they pertain to the payment process itself, as that is handed off to a 3rd party gateway (the 3rd party must be PCI compliant though).  Section 9 is relevant to the office of the merchant - not the web front end hosting provider (Cloud or not) and section 12 is about your choice of payment gateway, again, nothing to do with Mosso.</p>
+<p><strong>Mosso is only relevant when it comes to the PCI requirement that the merchant perimeter is subject to vulnerability scans. </strong> In other words, because the merchant has outsourced hosting of an Internet accessible web front-end to Mosso, the merchant website must pass an initial, then four quarterly vulnerability scans to meet the PCI scanning requirement.  But Mosso isn’t responsible for running those scans.  Their contribution was to ‘partner’ with two Approved Scanning Vendors who do the work.</p>
+<p>And that brings up two PCI scanning related issues regardless of whether you host on the Cloud or at a traditional hosting provider:</p>
+<ul>
+<li>vulnerability scans must take place after major network changes</li>
+<li>some vulnerability checks rely on banner grabbing to determine software version numbers and some providers (like Mosso) backport security fixes resulting in failed checks as version numbers are not incremented.  This is an age-old problem and a limitation of the scanning technology, not the provider.  The Approved Scanning Vendor will need to liaise with the provider/merchant to create manual exceptions.</li>
+</ul>
+<p>So what role does Mosso really play when it comes to PCI compliance today?  They permit the Authorized Scanning Vendor to perform scans and confirm software fixes are in place when vulnerability checks generate false positives.</p>
+<h3>The Takeaway</h3>
+<p>The fact that Mosso is seeking ways to help their customers off-load as much PCI compliance requirements to other 3rd parties is fine - it makes business sense for them and their merchant customers.  It’s their positioning of the effort as a <a href='http://blog.mosso.com/2009/03/cloud-hosting-is-secure-for-take-off-mosso-enables-the-spreadsheet-store-an-online-merchant-to-become-pci-compliant/'>“landmark breakthrough”</a> and that they are somehow pioneers which leads to generalisations rooted in misunderstandings that is the problem.</p>
+*Next time you hear someone say ‘Cloud Provider X is PCI compliant’, ask the golden PCI question: is their Cloud receiving, processing, storing or transmitting Credit Card data (as defined by the PCI DSS)?  If they say ‘No’, you’ll know what that really means..."marketecture":http://en.wikipedia.org/wiki/Marchitecture.*

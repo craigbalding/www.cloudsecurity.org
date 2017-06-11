@@ -1,0 +1,67 @@
+--- 
+title:      "Cloudsecurity.org Interviews Guido van Rossum: Google App Engine, Python and Security"
+description: "Interview with Guido van Rossum from Google talking about the security of Google App Engine and the Python programming language."
+created_at: 2008-07-01 19:03:10 Z
+author:     Craig Balding
+blog_post:  true
+tags:
+- Cloud Computing Security
+- Google App Engine
+
+--- 
+<p><a href='http://www.python.org/~guido/' title='Guido van Rossum in Google Uniform' target='_blank'><img title='Cloudsecurity.org Interviews Guido van Rossum: Google App Engine, Python and Security' src='http://www.python.org/~guido/images/IMG_2192.jpg' border='0' alt='Guido Homepage'/></a></p>
+<p>In this interview, cloudsecurity.org talks to <a href='http://www.python.org/~guido/' title='Homepage of Guido van Rossum'>Guido van Rossum</a> about <a href='http://python.org/' title='Python website'>Python</a>, <a href='http://code.google.com/appengine/docs/whatisgoogleappengine.html' title='Description of Google AppEngine'>Google App Engine</a> and security.</p>
+<p>Guido is the creator of the Python programming language and more recently, Google App Engine team member.  His involvement with the App Engine project was pretty late - the code “was almost ready for release” when he get involved.  The security architect of App Engine was primarily project lead, <a href='http://code.google.com/appengine/articles/cf1-text.html' title='Kevin Gibbs Campfire Transcript'>Kevin Gibbs</a>, supported by the rest of the App Engine crew and the Google Security Team.</p>
+<h4>The Interview</h4>
+<p><em>cloudsecurity.org: What security principles did you follow for App Engine?<br/>
+</em></p>
+<p>GvR: While I can’t share any specifics on what we’re doing to secure App Engine, I can say that the main principle we’ve followed could be called “defense in depth”. We’re not relying exclusively on a secure interpreter, or any other single security layer, to protect our users.</p>
+<p><em>cloudsecurity.org: Please provide some examples of how those principles played out in terms of the current implementation?<br/>
+</em> <em> </em></p>
+<p>GvR: Sorry, we don’t divulge such information.</p>
+<p><em>cloudsecurity.org: What criteria did you apply to Python module selection?</em></p>
+<p>GvR: We first looked for modules that were useful and straightforward to audit. If a module was large or complex, we’d only audit it (fixing things we found) if it was deemed essential or at least useful for a large number of users; otherwise we’d exclude it.</p>
+<p><em>cloudsecurity.org: What do you see as the security risks inherent in exposing an interpreter runtime in a shared environment?<br/>
+</em></p>
+<p>GvR: <span>I presume you’re asking about risks to users, like providing accidental access to data belonging to another app. We’ve taken extensive measures to isolate different apps from each other. For example, each app runs in a separate process, and the datastore prevents an app from accessing data belonging to other apps.</span></p>
+<p><em>cloudsecurity.org: I recently attended a fascinating talk by <a href='http://eusecwest.com/justin-ferguson-interpreter-vm-attacks.html' title='Justin Ferguson' target='_blank'>Justin Ferguson</a> (a Seattle based security consultant) at <a href='http://www.eusecwest.com/' title='eusecwest' target='_blank'>eusecwest</a> in London.  He gave a great talk exploring security vulnerabilities in language interpreters and specifically highlighted some security weaknesses in Python App Engine.  What are your thoughts on his research and specifically the Python issues he highlighted?  When do you anticipate they will get fixed?<br/>
+</em></p>
+<p>GvR: We’ve anticipated all of the possibilities raised in Justin’s talk, and took measures to protect our users. Justin highlighted weaknesses in Python, but not in App Engine. Furthermore, our security model does not rely solely upon protections within the Python interpreter; there are additional protections that these external analyses have missed.<em><br/>
+</em><br/>
+<em>cloudsecurity.org: How do you contain an attacker that exploits bugs in App Engine from exploiting the underlying OS and potentially interfering with other users processes or attacking backend systems?<br/>
+</em></p>
+<p>GvR: You are correct that there are strong measures in place, but I’m not at liberty to discuss details.</p>
+<p><em>cloudsecurity.org: Python was the first language to get the App Engine treatment, what language is next and what are some of the language specific security challenges the team has had to deal with?<br/>
+</em></p>
+<p>GvR: Although I can’t comment on what language is next, we are working on this, and have gotten a lot of great feedback from our developers. As far as language-specific security challenges, they stemmed mostly from the complexity of the Python interpreter. We spent a lot of time auditing this, and did a great deal more than just identifying buffer overflows.  I can also add that Google is actively researching the security of interpreted languages.  Google engineers routinely contribute security fixes to open source projects, including but not limited to Python.<em><br/>
+</em><br/>
+<em>cloudsecurity.org: How does the team decide when ‘enough is enough’ in terms of hardening the interpreter?<br/>
+</em> <em> </em></p>
+<p>GvR: That’s not really how we approach it. We realize that security is an ongoing effort, and try to stay ahead of threats through continuous monitoring and testing.</p>
+<p><em>cloudsecurity.org: Some <a href='http://blog.ianbicking.org/2008/04/13/app-engine-and-pylons/' title='commentators' style='color: #551a8b;' target='_blank'>commentators</a> have suggested that perhaps the difficulty of auditing the implementation led to some modules being more heavily restricted than perhaps necessary.  What are your thoughts on that and what plans, if any, are there to bring back code objects/functions that were eliminated in the initial release?  (with the benefit of hindsight).<br/>
+</em> <em> </em></p>
+<p>GvR: The only thing we are likely to put back is the _ast module, which was not audited based upon an underestimation of its usefulness (see my answer to question #3 above).  We will also put back some dummy functions and other objects whose absence currently prevents some popular frameworks from being loaded without modifications. For example, some harmless functionality in the imp module will come back. We’re also looking into making urllib2 work (to some extent), though that’s not really a security issue but merely a matter of API adjustment.</p>
+<p><em>cloudsecurity.org: It is reported that Google encourages small groups to go off and create.  How involved were the Google security team with App Engine in terms of design and implementation review/testing?  Given the dynamics, is it possible to have a meaningful security process that shadows the development process?<br/>
+</em> <em> </em></p>
+<p>GvR: The Google Security team is involved in everything we do. They have been extremely helpful.</p>
+<p><em>cloudsecurity.org: How can people report security weaknesses they discover in App Engine?  What commitment does Google give in terms of dealing vulnerability reports?<br/>
+</em> <em> </em></p>
+<p>GvR: There is a standard process for submitting security issues. See <a href='http://www.google.com/corporate/security.html' title='http://www.google.com/corporate/security.html' target='_blank'>http://www.google.com/corporate/security.html</a>. Google moves very fast to protect its users when a verifiable security vulnerability is reported.<span><em><br/>
+</em></span><br/>
+<em>cloudsecurity.org: One concern is the potential misuse of App Engine to exploit security vulnerabilities in visitors browsers.  This is not a new problem per se, shared hosting providers know all about this.  But with Google and other Cloud providers, the scalability potential is much higher.  What are your thoughts on this and what pro-active steps is Google taking to detect and terminate evil apps?<br/>
+</em> <em> </em></p>
+<p>GvR: This is high on our list of concerns. We deal with this through a combination of restrictions on what you can do (e.g. certain HTTP headers and ports are off-limits) and, again, monitoring.</p>
+<p><em>cloudsecurity.org: Beyond App Engine, what role do you think Python will play in the Cloud both now and in the future?<br/>
+</em> <em> </em></p>
+<p>GvR: Sorry, I’m not prone to philosophizing about the future.</p>
+<p><em>cloudsecurity.org: Trust is often cited as a barrier to enterprise adoption of Cloud Computing.  What role do you personally think Google can play in building that trust?<br/>
+</em> <em> </em></p>
+<p>GvR: I think trust is built up over a long period of experience. Our actions in terms of being open to our users will be the most important factor in establishing trust. Of course, Google’s reputation also helps: everybody understands that Google doesn’t want its name associated with a bad product.</p>
+<p><em>cloudsecurity.org: Looking at the Cloud Computing landscape beyond Google, what are your thoughts on the current state of Cloud Computing and Security?<br/>
+</em></p>
+<p>GvR: It’s obvious that Cloud Computing is only just taking off. The next few years will be very exciting.</p>
+<p><em>cloudsecurity.org: Lastly, what are some of your favourite App Engine apps?<br/>
+</em></p>
+<p>GvR: There are too many to enumerate. If you insist on a highlight, well, I like Rietveld (<a href='http://codereview.appspot.com/' title='http://codereview.appspot.com' target='_blank'>http://codereview.appspot.com</a>), a tool for collaborative code review which I (largely) wrote myself. It is open source and includes some essential components from Mondrian, a similar internal tool which I created before I joined the App Engine team.</p>
+<h4><strong>Thanks</strong></h4>
+<p>My thanks to Guido for his time and sharing his views.</p>

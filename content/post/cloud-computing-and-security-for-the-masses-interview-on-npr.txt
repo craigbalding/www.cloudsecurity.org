@@ -1,0 +1,22 @@
+--- 
+title:      "Cloud Computing and Security For The Masses: Interview on NPR"
+created_at: 2008-05-05 11:52:27 Z
+description: "Interview with Craig Balding on US National Public Radio (NPR).  Topics include the definition of cloud computing, how consumers can benefit and security challenges."
+author:     Craig Balding
+blog_post:  true
+tags:
+- Cloud Computing Security
+- media
+- npr
+
+--- 
+<p><img class='left' title='Cloud Computing and Security For The Masses: Interview on NPR' src='http://media.npr.org/images/logo_npr_125.gif' height='42' alt='US National Public Radio' width='125'/></p>
+<p>Cloud Computing is starting to escape the technical and business press.</p>
+<p>The proof?</p>
+<p>I was invited to talk about Cloud Computing and Security on NPR “Morning Edition”.</p>
+<p>NPR - National Public Radio - is a US based, non-commercial radio station covering news, talk and current affairs.  British readers may find it similar to BBC Radio 4.</p>
+<p>Every Monday, the “Morning Edition” has a technology theme.  The Cloud Computing segment was high level and aimed primarily at a non-tech audience.  I always find it hard to answer the question ‘what is Cloud Computing?’ as there are so many different definitions.  Regardless, it was a great chance to talk about an exciting technology and highlight the need for a real security conversation between the providers and people interested in IT security - the primary reason why I created cloudsecurity.org.</p>
+<p>The show boasts a very impressive audience - around 13 million!  I’ve never before had the opportunity to confuse that many people in one shot ;-).</p>
+<p>If you would like to listen (its short - 3.5 mins), click <a href='http://www.npr.org/templates/story/story.php?storyId=90180142'>here</a>.</p>
+<p>I’d like to publicly thank Nina at NPR for reaching out and extend a warm ‘Welcome’ to any NPR listeners who have dropped by.  Feel free to leave a message below or <a href='http://cloudsecurity.org/contact/'>email me</a> if you have any comments or questions.</p>
+

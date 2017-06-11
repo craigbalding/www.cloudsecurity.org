@@ -1,0 +1,62 @@
+--- 
+title:      "ENISA Cloud Security Risk Assessment: An Interview with Giles Hogben"
+created_at: 2009-11-20 18:27:27 Z
+author:     Craig Balding
+blog_post:  true
+tags:
+- Cloud Computing Security
+- ENISA
+- Europe
+- interview
+- risk assessment
+- standards
+fave:       3
+--- 
+<p>Today, ENISA <a href='http://www.enisa.europa.eu/act/rm/files/deliverables/cloud-computing-risk-assessment'>published</a> the results of their Cloud Computing Risk Assessment.</p>
+<blockquote><p>ENISA, supported by a group of subject matter experts comprising representatives from Industry, Academia and Governmental Organizations, has conducted, in the context of the Emerging and Future Risk Framework project, a risk assessment on cloud computing business model and technologies. The result is an in-depth and independent analysis that outlines some of the information security benefits and key security risks of cloud computing. The report provide also provides a set of practical recommendations.</p></blockquote>
+<p>I highly recommend reading at least the Executive Summary (pg. 4-10) that covers</p>
+<ul>
+<li>top recommendations</li>
+<li>top security benefits</li>
+<li>top security risks</li>
+</ul>
+<p>The Risk Assessment was led by <strong>Giles Hogben</strong> and <strong>Daniele Catteddu</strong> of ENISA.  They brought together a wide range of contributors to help develop the material. I count myself as privileged to have contributed - even if I would liked to have spent more time on it, it was a pleasure to work with the team.  As such, I stand behind the major findings of the report and think its something you should read and show decision makers.</p>
+<p>I caught up with Giles to ask the kinds of questions I often hear about these efforts - I hope you found his responses helpful in positioning the work.</p>
+<p><strong>First off, can you tell us a little bit about ENISA? (mission, funding, legal status etc)</strong></p>
+<p>GH: ENISA is a European Union agency. We collect and disseminate best practices in information security and try to create a proactive security culture in Europe. We also advise the Commission and the Member states on NIS policy. We’re based in Crete, Greece, but you’ll see us all over Europe - we’re very proactive in the security community.</p>
+<p>ENISA came into being following the adoption of Regulation (EC) No 460/2004 of the European Parliament and of the Council on 10 March 2004.</p>
+<p><strong>What was the motive behind ENISA leading the development of this report?</strong></p>
+<p>GH: Cloud computing was identified by our own experts and by our industry and academic advisory group as one of the emerging applications which is likely to have the biggest impact on European businesses and governments in the near future.</p>
+<p><strong>Was there a specific trigger?</strong></p>
+<p>GH: If I had to point to one thing, it would be the economic crisis last year, which really put cloud computing on the agenda. After that, security conferences were abuzz with cloud computing and, more importantly, it really started to take off in the market.</p>
+<p><strong>Who is the target audience of the report?</strong></p>
+<p>GH: The main target is businesses, especially SME’s because they are the biggest customers of cloud computing and they probably need the most help in understanding the security issues. Generally they would like to know how to get the obvious benefits of going cloud, while minimising their risks.</p>
+<p>What we’ve written is also applicable to larger businesses and we give some recommendations for research directions and legal recommendations which are aimed at governments.</p>
+<p><strong>Is it a “cloud security standard”? </strong></p>
+<p>GH: I suppose you’re referring to the assurance framework - the security checklist. It’s not as formal as that yet. We’re responding to two main requirements with this:</p>
+<p>First of all, businesses would like to know what questions to ask when evaluating cloud providers’ security. This can also be related to certification. If they already have a certification such as ISO 27001, they may be required to gain certain assurances from the providers.</p>
+<p>Secondly, cloud providers are overloaded with requests for audit and assurance - this takes up valuable time and can even weaken their security perimeters if it involves access to premises.</p>
+<p>The check-list is aimed to address both these issues, but it’s only a first step. We are also working with a group of interested organisations to make something more formal, which might be closer to what you’re talking about.</p>
+<p><strong>Is ENISA trying to tell us how we should run our clouds?</strong></p>
+<p>GH: Absolutely not - we’re offering a framework for cloud providers to answer the right questions about security, just once instead of over and over again. If you look at the check-list, you’ll see that it has quite a lot of open questions which just point out the areas in which information should be provided about practices which are followed. It’s not very prescriptive, but in terms of pointing out the questions that really should be answered one way or another by the average provider, you could also see it as a best practice guide.</p>
+<p><strong>How will ENISA get the report into the hands of those that would most benefit?</strong></p>
+<p>GH: Media and blogs like this are one channel. We’ll be presenting the report in conferences around Europe, such as the World Cloud Computing Summit in Tel Aviv in December. We are also inputting the results into the Commission’s consultation on research priorities for cloud computing and we’ll be issuing a video in the next week or so to publicise the report.</p>
+<p><strong>Can you tell us a little about the process that was followed to develop the report?</strong></p>
+<p>GH: We started with a survey of SME’s asking questions about their attitudes to cloud computing and security issues. This was input to a set of scenarios which bring out the main risk areas to be addressed. We used scenarios to do a risk analysis similar to the ISO 27001 process, starting with identifying the assets, then looking at risks as vulnerabilities leading to threats on assets. We classified the risks according to their impact and probability.</p>
+<p>For the security check-list, we looked at how the risks we identified should be addressed, and using the ISO 27001 controls as a basis, we identified the areas and questions which are most specific to the cloud.</p>
+<p>There are a number of groups producing cloud security related works.  Which groups did ENISA co-ordinate with?</p>
+<p>We have been in close contact with the <a href='http://cloudsecurityalliance.org/'>Cloud Security Alliance </a>- we will be organising a joint conference next year. We also have a member from the <a href='http://www.opengroup.org/jericho/'>Jericho forum</a> in the expert group.</p>
+<p><strong>What were your goals when pulling together the working group?</strong></p>
+<p>GH: We wanted to get experts from major cloud providers, research projects, legal expertise and some independent security consultants. I was very pleased with the makeup of the group. They were very motivated and we had some great discussions.</p>
+<p><strong>Were there any aspects of the survey results that surprised you?</strong></p>
+<p>GH: One point was the number of SME’s who cited non-repudiability as a concern - basically for the customer, that would equate to - how do you prove you’re not responsible if something nasty is done with your account. I don’t know if this was just a statistical blip, or if they didn’t understand the word, but maybe people really are concerned about this.</p>
+<p><strong>We often hear about US based cloud services and adoption stories.  What is your personal view on the rate of adoption of cloud services across Europe?</strong></p>
+<p>GH: There’s definitely more caution over here. The US government is already moving quite heavily into the cloud for lower assurance applications but I am not aware of any European governments who have reached that stage.</p>
+<p><strong>What are ENISA’s future plans around cloud security?</strong></p>
+<p>GH: Next year, we are organising a conference dedicated to this topic. It will be in Barcelona in March. We are also collaborating on a more formal version of the assurance framework. Expect an announcement on this towards the end of the year.</p>
+<p><strong>What IT security areas are you focusing on next with ENISA and where can people find out more?</strong></p>
+<p>GH: Next year, I will be working on evaluating Botnet measurement techniques and creating a set of best practices for Botnet defence and detection with a community of stakeholders. I’ll also be working on security exercises and following up the work on cloud computing I mentioned. So far, ENISA has focussed more on the lower layers - DNS, IPV6 etc… I want to drive our work more into the application layer, because I think many of the most important problems are higher up the stack.</p>
+<p><strong>Finally, what aspect of cloud computing fascinates you the most?</strong></p>
+<p>GH: Personally I’m very interested by higher assurance clouds - I’d like to know more about virtual private clouds, for example. How does key management work in large distributed architectures? Another question which fascinates me is how could cloud computing could be built so that the customer does not have to trust the provider - could we ever have workable encryption techniques which allow processing which can’t even in theory be accessed by the cloud provider? At the moment, the customer can encrypt data in clear-text, but as soon as they want to do anything with it in a CPU, they have to decrypt it.</p>
+<p>—</p>
+<p>I’d like to thank Giles for sharing his thoughts.  I hope this gives people insight into the motivation, process and objectives of ENISA’s cloud efforts.</p>

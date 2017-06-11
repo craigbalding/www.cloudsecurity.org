@@ -1,0 +1,25 @@
+--- 
+title:      How Much is the Reputation of Your SaaS Provider Worth?
+description: "How does your cloud provider handle vulnerability reports and how quickly do they inform you so you can assess retrospective risk?  Baynote case study."
+created_at: 2009-03-13 00:30:42 Z
+author:     Craig Balding
+blog_post:  true
+filter:
+  - textile
+tags:
+- Software as a Service
+
+--- 
+!/files/2009/03/baynote.png(How Much is the Reputation of Your SaaS Provider Worth)!
+
+<p><strong>Baynote just got shamefaced with the discovery of a basic Cross Site Scripting vulnerability in their ‘Social Search’ SaaS offering</strong>.  Although - as seems to be the trend - you won’t find this out from reading their blog, press releases or other public areas of their website.  Instead, <a href='http://www.theregister.co.uk/2009/03/12/cloud_computing_dark_side/'>you learn of it from El Reg</a> or from the blog of the security researcher that discovered the bug - <a href='http://holisticinfosec.blogspot.com/2009/02/assaassinated-more-on-saas-cloud-risk.html'>Russ McRee</a>:</p>
+<blockquote><p>Following the principles of <span style='font-style: italic;'>one flaw to rule them all</span>, a single validation error in the <span style='font-style: italic;'>q</span> variable found in <span style='font-style: italic;'>http://[Insert customer here].com/socialsearch/query?cn=[customer]&amp;cc=us&amp;q=</span> led to numerous Baynote customers falling prey to cross-site scripting. <a href='http://www.holisticinfosec.org/video/baynote/baynote.html'>[VIDEO HERE]</a></p></blockquote>
+<p>I don’t know if Baynote contacted <a href='http://www.baynote.com/customers/featured.php'>their clients</a> to explain (a) the ramifications of the flaw and (b) that they were making code changes in the background…but either way, I have a question:</p>
+<p><strong>Given that a Cross Site Scripting flaw can be exploited to attack the *users* of a website, where does that leave the visitors of the SaaS clients’ website who would be potentially exposed to the flaw?</strong></p>
+<p><strong>Along with the many benefits of SaaS services, you *and your customers* inherit the security bugs too</strong>.  From a business perspective we can begin the chorus of wailing and gnashing of teeth as we are reminded that a single vulnerability in a multi-tenant application, exposes all the tenants.  But <strong>what about the customers of the tenants?  Surely, the end-user is the real victim!</strong></p>
+<p>The positive side of this particular story is that <strong>Baynote moved quickly to fix the flaw</strong>.</p>
+<p><strong>The other angle on this incident is the disparity between the security claims  a SaaS/Cloud provider makes and the reality.</strong></p>
+<p>A quick Google site search of Baynote.com for the word ’security’ <a href='http://www.baynote.com/technology/faq/'>brings up this</a>:</p>
+<p><img class='aligncenter size-full wp-image-149' title='howsecureisbaynote' src='/files/2009/03/howsecureisbaynote.png' height='125' alt='howsecureisbaynote How Much is the Reputation of Your SaaS Provider Worth?' width='585'/></p>
+<p><strong>When a providers primary website property is vulnerable to a basic XSS attack, what do you make of statements like this?<br/>
+</strong></p>

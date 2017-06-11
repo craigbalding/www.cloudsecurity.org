@@ -1,0 +1,32 @@
+--- 
+title:      "ENISA Cloud Risk Assessment:  What Are Your Concerns about Cloud Computing?"
+created_at: 2009-04-27 20:34:22 Z
+author:     Craig Balding
+blog_post:  true
+tags:
+- Cloud Computing Security
+- ENISA
+- risk assessment
+- SME
+
+--- 
+<p><img class='left' title='ENISA' src='/files/ENISA___Media_Samples-20090427-223327.jpg' height='109' alt='ENISA___Media_Samples-20090427-223327 ENISA Cloud Risk Assessment:  What Are Your Concerns about Cloud Computing?' width='165'/>Got concerns about Cloud Computing Security?</p>
+<p>Now’s your chance to express them…</p>
+<p><a href='http://www.enisa.europa.eu/'>ENISA</a> (the European Network and Information Security Agency) is conducting a security risk assessment of cloud computing.</p>
+<p>If ENISA is unfamiliar to you, here’s how they describe themselves:</p>
+<blockquote/>
+<ul>
+<li>Is a <strong>Centre of Expertise </strong> for the EU Member States and EU Institutions in Network and Information Security, giving expert advice and recommendations</li>
+<li>Is a switchboard of information  for best practices</li>
+<li>Facilitates contacts between the EU-institutions, the Members States and the private business &amp; industry actors</li>
+</ul>
+<p>For the Cloud Risk Assessment, the group (of which I’m a member) will focus on three scenarios:</p>
+<ol>
+<li>A user perspective on Cloud Computing (i.e. Small and Medium Enterprises)</li>
+<li>Cloud Computing in a eGovernment environment (i.e. national health service)</li>
+<li>Cloud Computing and Resilience</li>
+</ol>
+<p>In pursuit of the first scenario, ENISA is seeking feedback:</p>
+<blockquote><p>“…aimed at giving advice to (among others) SME’s on the most important risks in adopting cloud computing technologies, as well as ways to address those risks.</p>
+<p>As part of this study, we want to look in detail at the perspective of SME end-users of cloud computing infrastructures and applications (either current users or those considering adoption). As a first step, we have decided to base our study on a survey of the actual needs, requirements and expectations for cloud computing infrastructures.”</p></blockquote>
+<p>Take the 10 minute survey <a href='http://www.surveymonkey.com/s.aspx?sm=CZdVubBa9LIzYlR3KNeZIQ_3d_3d'>here</a> (results will be shared).</p>

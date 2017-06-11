@@ -1,0 +1,34 @@
+--- 
+title:      "Privacy In the Cloud: Show Me The Money"
+description: "Cloud Computing raises privacy concerns.  A recent Pew Internet study highlights the growing use of cloud sercice.  What is your privacy worth?" 
+created_at: 2008-10-12 23:49:41 Z
+author:     Craig Balding
+blog_post:  true
+tags:
+- Cloud Computing Security
+
+--- 
+<p><img class='alignright' title='Privacy In the Cloud: Show Me The Money' src='http://farm3.static.flickr.com/2052/2404940312_e759c4030d_m_d.jpg' height='240' alt='Locker' style='float: right; border: 0; margin: 3px;' width='180'/>Privacy is a lot like universal healthcare.  Many agree its a good idea in concept, but few people want to pay for it.</p>
+<p>Richard Stallman - the man that gave us <a href='http://www.gnu.org/'>GNU</a> - <a href='http://www.guardian.co.uk/technology/2008/sep/29/cloud.computing.richard.stallman'>doesn’t trust Cloud providers with his data</a> and says you shouldn’t either.  Richard believes we should store our private data on our own computers using ‘free’ (as in <a href='http://www.gnu.org/gnu/thegnuproject.html'>freedom</a>) software.  The ironic part for Richard is that a significant portion of the Cloud is powered by open source software which he indirectly created (think <a href='http://gcc.gnu.org/'>gcc</a>).</p>
+<p>Richard sees it as a question of control.  Control is important but it isn’t the only variable.  Rather, I see it as a question of control, competence and economics.</p>
+<p>The quick rebuttal to Richards’ view is this: the average computer user is <a href='http://www.stallman.org/photos/rms-full-size.jpg'>not as smart as you</a>.  Control is not the same as competence.  Control is about exercising choice, not about requiring everyone in the world to develop sufficient skills to protect complex hardware and software systems (aka their computer) against <a href='http://ddanchev.blogspot.com/'>ever increasing threats</a>.</p>
+<p>My view is that privacy is not ‘free’.  It comes at a cost.  Whether you run your own systems or rely on someone else to do it, there is a cost.  There is cost in designing and implementing mechanisms to support privacy.  Beyond upfront costs there are ongoing expenditures to ensure privacy is maintained e.g. maintaining access control lists, testing and applying security patches, data leakage prevention etc.  None of these things are ‘free’.</p>
+<p>If we agree that privacy costs money then how much is your privacy worth?</p>
+<p>Stop for a second - think of a number…  </p>
+<p>Now did we all think of the <a href='http://pbskids.org/sesame/coloring/images/07_grover.gif'>same number</a>?</p>
+<p>The problem with a one size fits all approach to privacy is that we each place a different value on it.</p>
+<p>Checking in on the <a href='http://epic.org/'>EPIC</a> site, I saw this:  </p>
+<blockquote><p>A new report from <a href='http://www.pewinternet.org/'>Pew Internet and American Life Project</a> indicates that “cloud computing” applications, such as web-based email and other web apps, are raising new privacy concerns. The report <a href='http://www.pewinternet.org/press_release.asp?r=306' target='_blank'>Use of Cloud Computing: Applications and Services</a> found that 69% of online Americans use webmail services, store data online, or use software programs such as word processing applications whose functionality is located on the web. At the same time, “users report high levels of concern when presented with scenarios in which companies may put their data to uses of which they may not be aware.” For example, 90% of respondents said that they “would be very concerned if the company at which their data were stored sold it to another party,” 80% say “they would be very concerned if companies used their photos or other data in marketing campaigns,” and 68% of “users of at least one of the six cloud applications say they would be very concerned if companies who provided these services analyzed their information and then displayed ads to them based on their actions.”</p></blockquote>
+<p>What does that tell us?</p>
+<p>The average (American) Internet user finds Cloud services convenient but has concerns about how their privacy might be affected by Cloud providers actions (duh!).  The survey identifies a lack of awareness in how private data is used in some consumer based Cloud services (consistent with web advertising awareness surveys).  </p>
+<p>Unfortunately, the results of this survey are not very actionable.  The survey doesn’t mention whether these are all ‘free’ Cloud services (we can only assume they are) or ask the respondents what their expectations of privacy are and how much they would be willing to pay for different privacy assurance levels. </p>
+<p>On a sidenote, respondents were not asked if they had actually read the privacy agreement for the services they signed up to.  But the providers know if they did or not…  Or at least, they have the data to figure it out.  At sign up time they can measure the time between displaying the privacy agreement and the user clicking ‘I accept’.  If its just a few seconds then its pretty obvious there was more scrolling than reading going on.  But I think we can probably guess the answer without the data ;-).</p>
+<p>I believe we need to be able to link expectation of privacy with cost.</p>
+<ul>
+<li>How much are you willing to pay for privacy?  What level of privacy assurance do you need?</li>
+<li>How much is your Cloud Provider paying to protect your privacy today?  What privacy services could they reasonably offer if they had customers willing to pay?  How might this compare with how you manage your private data on your home computer today?</li>
+</ul>
+<p>The cynical view is that we expect privacy but don’t want to pay for it.  Its a bit like uptime - there is a parallel universe out there, where internal IT departments allegedly meet their 99.999% uptime SLAs, but when Gmail goes down, the Sergey Brin witchcraft dolls come out.</p>
+<p>From a provider perspective, the “cost” of privacy invariably gets bundled under that line item called ‘Information Security’.  And don’t be fooled, the cost of privacy in reality is more than the salary of the person employed to be the privacy advocate (if there is one).  If we can’t see how much our providers are spending on our privacy then how can we judge if they are spending enough?  And what is enough?  And what can I get if I’m willing to pay a little extra?</p>
+<p>Personally, I would rather we get some transparency around privacy costs and assessment of offerings.  However, without a sufficiently sized market of customers willing to pay for privacy assurance and Cloud Providers willing to be more open, I won’t hold my breath.</p>
+<p>What about you?  Would you be prepared to pay for privacy?  Should providers be more transparent about what they do and don’t do and how they do it?<br/>
