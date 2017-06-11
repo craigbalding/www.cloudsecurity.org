@@ -1,17 +1,16 @@
 #baseURL = "http://www.cloudsecurity.org"
 baseURL = "/"
 title = "The Cloud Security Blog"
-
 theme = "minimo"
 
-googleAnalytics = ""
+googleAnalytics = "UA-3580675-4"
 Paginate = 3
 
 [params]
-  description = "Expert knowledge on cloud security"
+  description = "Expert knowledge on Cloud Security, covering the technology and tools, hacks and human factors, policy and regulation."
   dateFormat = "2006, Jan 2"
   copyrightOwner = "Craig Balding"
-  copyrightStartYear = "2017"
+  copyrightStartYear = "2008"
   hideSingleNavigation = false
 
 [params.opengraph]
