@@ -31,6 +31,10 @@ We use cookies to store information about visitor preferences and to record user
 
 If you wish to disable cookies you may do so through your web browser options. Instructions for doing so and for other cookie-related management can be found on the specific web browsers’ websites.
 
+**Hosting / Contact Form**
+
+The website is hosted on [Netlify](https://www.netlify.org) so network traffic from your devices to this website is processed by Netlify.  This includes the [contact form](/contact).  To learn more, read their [privacy policy](https://www.netlify.com/privacy/).
+
 **DoubleClick DART Cookie**
 
 Google, a third party vendor, uses the DART cookie to serve ads on cloudsecurity.org. Users may opt out of the use of the DART cookie by visiting "Google’s Content Network Privacy Policy.":http://www.google.com/policies/privacy/

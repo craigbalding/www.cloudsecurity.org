@@ -4,7 +4,14 @@ title = "contact"
 menu = "main"
 +++
 
-I read all emails and will respond if relevant (I receive too many sales piches!). 
+**Please contact me to introduce yourself, share your thoughts, or anything else. I happily read and reply to every email.**
+
+If you wish to promote your product or service, please note that there is a high bar for getting featured here.  Not because I consider myself special, but my readers' attention is.
+
+If you would like to invite me to speak at your conference, thank you for considering me.  Please use the subject line 'conference' and I will know to reply with my availability and speaking fees.
+
+*The form below is not suitable for very private or confidential information. If you share your contact info, I will get back to you and we can find a better way to communicate.*
+
 
 <div class="form">
  <form name="contact" action="/" role="form" class="contactForm" netlify>
@@ -26,8 +33,9 @@ I read all emails and will respond if relevant (I receive too many sales piches!
         <div class="validation"></div>
      </div>
      <div>
-     <button>Send</button>    
+     <button>Send</button> <i>  ...and return to the homepage. </i>
    </div>
  </form>
 </div>
+
 
